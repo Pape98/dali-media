@@ -2,6 +2,36 @@ body {
   background: #eff2f5;
 }
 
-a {
-  color: #00B7FF;
+.title {
+  font-family: Noteworthy;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 1.7em;
+}
+
+.navbar {
+  height: 7vh !important;
+}
+
+.margin-0 {
+  margin: 0 !important;
+}
+
+.padding-0 {
+  padding: 0 !important;
+}
+
+textarea{
+  border: none;
+  background:  #eff2f5;
+  overflow: auto; 
+}
+
+#main-grid{
+  height: 100%;
+  margin-top: 7vh !important;
+}
+
+::placeholder { /* Chrome/Opera/Safari */
+  color:red;
 }

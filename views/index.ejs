@@ -11,10 +11,12 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
+<!-- Styling in this file is unique -->
 <style>
   body {
     height: 100%;
   }
+
   .button {
     margin-top: 3em !important;
   }
@@ -35,17 +37,22 @@
     line-height: 103px;
   }
 </style>
-<!-- Styling in this file is unique -->
 
 <body>
-  <div class='ui fixed inverted big menu'>
-
+  <div class='ui fixed inverted huge menu'>
   </div>
   <div class="ui middle aligned center aligned grid">
     <div class="column">
       <h1> DaliBook</h1>
       <img class="ui centered  small image" src="/images/Logo.png" alt="logo">
-      <div class="ui huge black button ">View Profiles</div>
+      <a href="/profiles">
+        <div class="ui animated huge black b button" tabindex="0">
+          <div class="visible content">Next</div>
+          <div class="hidden content">
+            <i class="right arrow icon"></i>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 
