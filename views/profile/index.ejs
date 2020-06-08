@@ -1,8 +1,34 @@
 <% include ../partials/header %>
 
 <div class="ui container grid" id="main-grid">
-    <div class="ui ten wide column">
+    <div class="ui twelve wide column">
         <div id="context">
+            <div class="ui grid">
+                <div class="ui middle aligned two wide column">
+                    <a href=""><i class="left angle icon black big circular"></i></a>
+                </div>
+                <div class=" twelve wide column">
+                    <div class="ui three special yellow cards">
+                        <% for (var i = 0; i < 3; ++i){ %>
+                        <div class="card">
+                          <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                              <div class="content">
+                                <div class="center">
+                                  <div class="ui inverted button">Add Friend</div>
+                                </div>
+                              </div>
+                            </div>
+                            <img src="/images/profilePicture.png">
+                          </div>
+                        </div>
+                        <% } %>
+                      </div>
+                </div>
+                <div class="ui middle aligned two wide column">
+                    <a href=""><i class="right angle icon black big circular"></i></a>
+                </div>
+            </div>
             <div class="ui padded segment">
                 <div class="ui padded grid margin-0">
                     <div class="row">
@@ -50,24 +76,22 @@
                 </div>
             </div>
             <div>
-                <% for (var i = 0; i < 40; ++i){%>
+                <% profileData.forEach(function(profile){%>
                 <div class="ui segment">
                     <div class="ui feed">
                         <div class="event">
                             <div class="label">
-                                <img src="/images/profilePicture.png">
+                                <img src="<%=profile.picture%>">
                             </div>
                             <div class="content">
                                 <div class="summary">
-                                    <a>Joe Henderson</a> posted on his page
+                                    <a><%=profile.name%></a> shares his/her favorite quote
                                     <div class="date">
                                         3 days ago
                                     </div>
                                 </div>
                                 <div class="extra text">
-                                    Ours is a life of constant reruns. We're always circling back to where we'd we started,
-                                    then starting all over again. Even if we don't run extra laps that day, we surely will
-                                    come back for more of the same another day soon.
+                                    "<%=profile.quote%>"
                                 </div>
                                 <div class="meta">
                                     <a class="like">
@@ -78,14 +102,14 @@
                         </div>
                     </div>
                 </div>
-                <% } %>
+                <% }) %>
             </div>
         </div>
     </div>
-    <div class="ui six wide column">
+    <div class="ui four wide column">
         <div class="ui rail">
             <div class="ui sticky">
-                <div class="ui grid">
+                <!-- <div class="ui grid">
                     <div class="row">
                         <div class="ui center aligned sixteen wide column">
                             <i class="angle up circular big black icon"></i>
@@ -112,7 +136,7 @@
                     <div class="one column row">
 
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
