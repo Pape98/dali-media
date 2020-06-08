@@ -1,16 +1,20 @@
 <% include ../partials/header %>
 
 <div class="ui container grid" id="main-grid">
-    <div class="twelve wide column" id="lef">
+    <div class="twelve wide column" id="leftPanel">
         <div id="context">
             <div class="ui stackable grid">
                 <div class="ui middle aligned one wide column">
-                    <a href=""><i class="left angle icon circular inverted yellow"></i></a>
+                    <i class="left angle icon circular inverted yellow"></i>
                 </div>
                 <div class=" fourteen wide column">
-                    <div class="ui four special yellow cards">
-                        <% for (var i = 0; i < 4; ++i){ %>
-                        <div class="card">
+                    <div class="ui three special  cards">
+                        <% for (var i = 0; i < 3; ++i){ %>
+                        <div class="ui special card">  
+                            <div class="content">
+                                <div class="right floated meta">Class of <%=selectedProfileData[i].year%></div>
+                                <img src="<%=selectedProfileData[i].picture%>" class="ui avatar image">
+                            </div>
                             <div class="blurring dimmable image">
                                 <div class="ui dimmer">
                                     <div class="content">
@@ -19,51 +23,57 @@
                                         </div>
                                     </div>
                                 </div>
-                                <img src="<%=selectedProfileData[i].picture%>" style="height: 200px !important;">
+                                <img src="<%=selectedProfileData[i].picture%>" style="height: 160px !important;">
                             </div>
                             <div class="content">
-                                <a class="header"><%=selectedProfileData[i].name%></a>
+                                <a class="ui small header"><%=selectedProfileData[i].name%></a>
                                 <div class="meta">
                                     <span class="date">Joined in 2013</span>
-                                  </div>
+                                </div>
                             </div>
                         </div>
                         <% } %>
                     </div>
                 </div>
                 <div class="ui middle aligned one wide column">
-                    <a href=""><i class="right angle icon circular inverted yellow" style="background: ;"></i></a>
+                   <i class="right angle icon circular inverted yellow"></i>
                 </div>
             </div>
-            <div class="ui padded segment">
+            <div class="ui padded inverted segment">
                 <div class="ui stackable padded grid margin-0">
                     <div class="row">
-                        <div class="three wide column">
+                        <div class="ui middle aligned four wide column">
                             <img class="ui circular small image" src="images/profilePicture.png" alt="profilePicture">
                         </div>
-                        <div class="ten wide column">
+                        <div class="nine wide column">
                             <div class="ui form">
                                 <div class="field">
-                                    <textarea type="text" rows="8" style="border: none; background:#eff2f5;"
-                                        placeholder="What's on your mind ... ?"></textarea>
+                                    <div class="ui corner labeled icon input">
+                                        <div class="ui  corner label">
+                                            <i class="brain red icon"></i>
+                                        </div>
+                                        <textarea placeholder="What's on your mind ... ?"></textarea>
+                                    </div>
+                                    <!-- <textarea type="text" rows="8" style="border: none; background:#eff2f5;"
+                                        placeholder="What's on your mind ... ?"></textarea> -->
                                 </div>
                             </div>
                         </div>
                         <div class="three wide column">
                             <div class="ui vertical buttons">
-                                <button class="ui red basic button">
+                                <button class="ui red button">
                                     <i class="icon angry"></i>
                                     Angry
                                 </button>
-                                <button class="ui orange basic button">
+                                <button class="ui orange button">
                                     <i class="icon angry"></i>
                                     Tired
                                 </button>
-                                <button class="ui yellow basic button">
+                                <button class="ui yellow button">
                                     <i class="icon meh"></i>
                                     Alright
                                 </button>
-                                <button class="ui green basic button">
+                                <button class="ui green button">
                                     <i class="icon smile beam"></i>
                                     Angry
                                 </button>
@@ -113,12 +123,11 @@
                         <h4 class="ui header">Some of your friends</h4>
                     </div>
                     <% for (var i = 0; i < 2; ++i){ %>
-                    <div class="ui basic segment">
+                    <div class="ui segment">
                         <div class="ui items">
                             <div class="item">
-                                <div class="ui tiny image">
-                                    <img class="ui tiny circular image" src="<%=friends[i].picture%>"
-                                        style="height: 82px;">
+                                <div class="ui tiny circular image">
+                                    <img src="<%=friends[i].picture%>" style="height: 82px;">
                                 </div>
                                 <div class="content">
                                     <div class="header"> <i class="heart red icon"></i><%=friends[i].name%></div>
@@ -138,12 +147,11 @@
                     </div>
 
                     <% for (var i = 0; i < 3; ++i){ %>
-                    <div class="ui basic segment">
+                    <div class="ui segment">
                         <div class="ui items">
                             <div class="item">
-                                <div class="ui tiny image">
-                                    <img class="ui tiny circular image" src="<%=whoToFollow[i].picture%>"
-                                        style="height: 82px;">
+                                <div class="ui tiny circular image">
+                                    <img src="<%=whoToFollow[i].picture%>" style="height: 82px;">
                                 </div>
                                 <div class="content">
                                     <div class="header"><%=whoToFollow[i].name%></div>
@@ -155,6 +163,7 @@
                                     </div>
                                     <div class="extra">
                                         <div class="ui right floated tiny yellow button">
+                                            <i class="plus icon"></i>
                                             Follow
                                         </div>
                                     </div>
@@ -167,9 +176,5 @@
             </div>
         </div>
     </div>
-</div>
-
-<div style="height: 100%; width: 100%;">
-
 </div>
 <% include ../partials/footer %>
