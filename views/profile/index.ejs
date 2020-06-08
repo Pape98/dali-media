@@ -1,79 +1,78 @@
 <% include ../partials/header %>
 
 <div class="ui container grid" id="main-grid">
-    <div class="ui twelve wide column">
+    <div class="twelve wide column" id="lef">
         <div id="context">
-            <div class="ui grid">
-                <div class="ui middle aligned two wide column">
-                    <a href=""><i class="left angle icon black big circular"></i></a>
+            <div class="ui stackable grid">
+                <div class="ui middle aligned one wide column">
+                    <a href=""><i class="left angle icon circular inverted yellow"></i></a>
                 </div>
-                <div class=" twelve wide column">
-                    <div class="ui three special yellow cards">
-                        <% for (var i = 0; i < 3; ++i){ %>
+                <div class=" fourteen wide column">
+                    <div class="ui four special yellow cards">
+                        <% for (var i = 0; i < 4; ++i){ %>
                         <div class="card">
-                          <div class="blurring dimmable image">
-                            <div class="ui dimmer">
-                              <div class="content">
-                                <div class="center">
-                                  <div class="ui inverted button">Add Friend</div>
+                            <div class="blurring dimmable image">
+                                <div class="ui dimmer">
+                                    <div class="content">
+                                        <div class="center">
+                                            <div class="ui inverted button">View</div>
+                                        </div>
+                                    </div>
                                 </div>
-                              </div>
+                                <img src="<%=selectedProfileData[i].picture%>" style="height: 200px !important;">
                             </div>
-                            <img src="/images/profilePicture.png">
-                          </div>
+                            <div class="content">
+                                <a class="header"><%=selectedProfileData[i].name%></a>
+                                <div class="meta">
+                                    <span class="date">Joined in 2013</span>
+                                  </div>
+                            </div>
                         </div>
                         <% } %>
-                      </div>
+                    </div>
                 </div>
-                <div class="ui middle aligned two wide column">
-                    <a href=""><i class="right angle icon black big circular"></i></a>
+                <div class="ui middle aligned one wide column">
+                    <a href=""><i class="right angle icon circular inverted yellow" style="background: ;"></i></a>
                 </div>
             </div>
             <div class="ui padded segment">
-                <div class="ui padded grid margin-0">
+                <div class="ui stackable padded grid margin-0">
                     <div class="row">
-                        <div class="four wide column">
-                            <img class="ui circular tiny image" src="images/profilePicture.png" alt="profilePicture">
+                        <div class="three wide column">
+                            <img class="ui circular small image" src="images/profilePicture.png" alt="profilePicture">
                         </div>
-                        <div class="twelve wide column">
+                        <div class="ten wide column">
                             <div class="ui form">
                                 <div class="field">
-                                    <textarea type="text" style="border: none;" rows="3"
+                                    <textarea type="text" rows="8" style="border: none; background:#eff2f5;"
                                         placeholder="What's on your mind ... ?"></textarea>
                                 </div>
                             </div>
                         </div>
-                    </div>
-    
-                    <div class="four column row">
-                        <div class="column mood">
-                            <button class="ui red button">
-                                <i class="icon angry"></i>
-                                Angry
-                            </button>
-                        </div>
-                        <div class="column">
-                            <button class="ui orange button">
-                                <i class="icon angry"></i>
-                                Tired
-                            </button>
-                        </div>
-                        <div class="column mood">
-                            <button class="ui yellow button">
-                                <i class="icon meh"></i>
-                                Alright
-                            </button>
-                        </div>
-                        <div class="column mood">
-                            <div class="column">
-                                <button class="ui green button">
+                        <div class="three wide column">
+                            <div class="ui vertical buttons">
+                                <button class="ui red basic button">
+                                    <i class="icon angry"></i>
+                                    Angry
+                                </button>
+                                <button class="ui orange basic button">
+                                    <i class="icon angry"></i>
+                                    Tired
+                                </button>
+                                <button class="ui yellow basic button">
+                                    <i class="icon meh"></i>
+                                    Alright
+                                </button>
+                                <button class="ui green basic button">
                                     <i class="icon smile beam"></i>
                                     Angry
                                 </button>
                             </div>
                         </div>
                     </div>
+
                 </div>
+
             </div>
             <div>
                 <% profileData.forEach(function(profile){%>
@@ -91,7 +90,7 @@
                                     </div>
                                 </div>
                                 <div class="extra text">
-                                    "<%=profile.quote%>"
+                                    <%=profile.quote%>
                                 </div>
                                 <div class="meta">
                                     <a class="like">
@@ -106,39 +105,71 @@
             </div>
         </div>
     </div>
-    <div class="ui four wide column">
+    <div class="four wide column" id="rightPanel">
         <div class="ui rail">
             <div class="ui sticky">
-                <!-- <div class="ui grid">
-                    <div class="row">
-                        <div class="ui center aligned sixteen wide column">
-                            <i class="angle up circular big black icon"></i>
-                        </div>
+                <div class="ui basic segments">
+                    <div class="ui inverted segment">
+                        <h4 class="ui header">Some of your friends</h4>
                     </div>
-                    <div class="ui center aligned one column row">
-                        <% for (var i = 0; i < 3; ++i){%>
-                            <div class="ui horizontal card">
-                                <div class="image">
-                                    <img src="/images/profilePicture.png">
+                    <% for (var i = 0; i < 2; ++i){ %>
+                    <div class="ui basic segment">
+                        <div class="ui items">
+                            <div class="item">
+                                <div class="ui tiny image">
+                                    <img class="ui tiny circular image" src="<%=friends[i].picture%>"
+                                        style="height: 82px;">
                                 </div>
                                 <div class="content">
-                                    <div class="header">Pape Sow Traore</div>
+                                    <div class="header"> <i class="heart red icon"></i><%=friends[i].name%></div>
                                     <div class="meta">
-                                        <span class="category">Germantown, WI</span>
+                                        <span>Class of <%=friends[i].year%></span>
                                     </div>
                                     <div class="description">
-                                        <div class="ui basic button">Follow</div>
+                                        <p><%=friends[i].major%>%></p>
                                     </div>
                                 </div>
                             </div>
-                            <% }%>
+                        </div>
                     </div>
-                    <div class="one column row">
+                    <% } %>
+                    <div class="ui inverted segment">
+                        <h4 class="ui inverted header">Who to follow?</h4>
+                    </div>
 
+                    <% for (var i = 0; i < 3; ++i){ %>
+                    <div class="ui basic segment">
+                        <div class="ui items">
+                            <div class="item">
+                                <div class="ui tiny image">
+                                    <img class="ui tiny circular image" src="<%=whoToFollow[i].picture%>"
+                                        style="height: 82px;">
+                                </div>
+                                <div class="content">
+                                    <div class="header"><%=whoToFollow[i].name%></div>
+                                    <div class="meta">
+                                        <span>Class of <%=whoToFollow[i].year%></span>
+                                    </div>
+                                    <div class="description">
+                                        <p><%=whoToFollow[i].major%>%></p>
+                                    </div>
+                                    <div class="extra">
+                                        <div class="ui right floated tiny yellow button">
+                                            Follow
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div> -->
+                    <% } %>
+                </div>
             </div>
         </div>
     </div>
+</div>
+
+<div style="height: 100%; width: 100%;">
+
 </div>
 <% include ../partials/footer %>

@@ -9,7 +9,7 @@ body {
   font-size: 1.7em;
 }
 
-.navbar {
+#navbar {
   height: 7vh !important;
 }
 
@@ -32,6 +32,13 @@ textarea{
   margin-top: 7vh !important;
 }
 
-::placeholder { /* Chrome/Opera/Safari */
-  color:red;
+.angle:hover { /* Chrome/Opera/Safari */
+ background: black !important;
+}
+
+
+@media only screen and (max-width: 1125px) {
+  #rightPanel, #navbar{
+    display: none;
+  }
 }
