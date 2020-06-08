@@ -1,95 +1,120 @@
-<% include ../partials/header %> 
+<% include ../partials/header %>
 
 <div class="ui container grid" id="main-grid">
-    <div class="ui four wide column">
-        <div class="ui vertical menu">
-            <a class="item">
-                <h3 class="ui header">
-                    <i class="home yellow icon"></i>
-                    <div class="content">
-                     Home
-                    </div>
-                  </h3>
-            </a>
-            <a class="item">
-                <h3 class="ui header">
-                    <i class="envelope yellow icon"></i>
-                    <div class="content">
-                     Messages
-                    </div>
-                  </h3>
-            </a>
-            <a class="item">
-                <h3 class="ui header">
-                    <i class="bell yellow icon"></i>
-                    <div class="content">
-                     Notifications
-                    </div>
-                  </h3>
-            </a>
-        </div>
-    </div>
-    <div class="ui eight wide column">
-        <div class="ui segment padding-0">
-            <div class="ui grid margin-0">
-                <div class="row">
-                    <div class="four wide column">
-                        <img class="ui circular tiny image" src="images/profilePicture.png" alt="profilePicture">
-                    </div>
-                    <div class="twelve wide column">
-                        <div class="ui form">
-                            <div class="field">
-                              <textarea type="text" style="border: none;" rows="3" placeholder="What's on your mind ... ?"></textarea>
-                            </div>
-                          </div>
-                    </div>
-                </div>
-
-                <div class="four column row">
-                    <div class="column">
-                        <a class="ui grey grey header">
-                            <i class="angry red icon"></i>
-                            <div class="content">
-                             Angry
-                            </div>
-                          </a>
-                    </div>
-                    <div class="column">
-                        <a class="ui grey header">
-                            <i class="tired orange icon"></i>
-                            <div class="content">
-                             Tired
-                            </div>
-                          </a>
-                    </div>
-                    <div class="column">
-                        <a class="ui grey header">
-                            <i class="meh yellow icon"></i>
-                            <div class="content">
-                             Angry
-                            </div>
-                          </a>
-                    </div>
-                    <div class="column">
-                        <div class="column">
-                            <a class="ui grey header">
-                                <i class="smile beam green icon"></i>
-                                <div class="content">
-                                 Happy
+    <div class="ui ten wide column">
+        <div id="context">
+            <div class="ui padded segment">
+                <div class="ui padded grid margin-0">
+                    <div class="row">
+                        <div class="four wide column">
+                            <img class="ui circular tiny image" src="images/profilePicture.png" alt="profilePicture">
+                        </div>
+                        <div class="twelve wide column">
+                            <div class="ui form">
+                                <div class="field">
+                                    <textarea type="text" style="border: none;" rows="3"
+                                        placeholder="What's on your mind ... ?"></textarea>
                                 </div>
-                              </a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="four column row">
+                        <div class="column mood">
+                            <button class="ui red button">
+                                <i class="icon angry"></i>
+                                Angry
+                            </button>
+                        </div>
+                        <div class="column">
+                            <button class="ui orange button">
+                                <i class="icon angry"></i>
+                                Tired
+                            </button>
+                        </div>
+                        <div class="column mood">
+                            <button class="ui yellow button">
+                                <i class="icon meh"></i>
+                                Alright
+                            </button>
+                        </div>
+                        <div class="column mood">
+                            <div class="column">
+                                <button class="ui green button">
+                                    <i class="icon smile beam"></i>
+                                    Angry
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="ui segment">
-
+            <div>
+                <% for (var i = 0; i < 40; ++i){%>
+                <div class="ui segment">
+                    <div class="ui feed">
+                        <div class="event">
+                            <div class="label">
+                                <img src="/images/profilePicture.png">
+                            </div>
+                            <div class="content">
+                                <div class="summary">
+                                    <a>Joe Henderson</a> posted on his page
+                                    <div class="date">
+                                        3 days ago
+                                    </div>
+                                </div>
+                                <div class="extra text">
+                                    Ours is a life of constant reruns. We're always circling back to where we'd we started,
+                                    then starting all over again. Even if we don't run extra laps that day, we surely will
+                                    come back for more of the same another day soon.
+                                </div>
+                                <div class="meta">
+                                    <a class="like">
+                                        <i class="like icon"></i> 5 Likes
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+            </div>
         </div>
     </div>
-    <div class="ui four wide column">
+    <div class="ui six wide column">
+        <div class="ui rail">
+            <div class="ui sticky">
+                <div class="ui grid">
+                    <div class="row">
+                        <div class="ui center aligned sixteen wide column">
+                            <i class="angle up circular big black icon"></i>
+                        </div>
+                    </div>
+                    <div class="ui center aligned one column row">
+                        <% for (var i = 0; i < 3; ++i){%>
+                            <div class="ui horizontal card">
+                                <div class="image">
+                                    <img src="/images/profilePicture.png">
+                                </div>
+                                <div class="content">
+                                    <div class="header">Pape Sow Traore</div>
+                                    <div class="meta">
+                                        <span class="category">Germantown, WI</span>
+                                    </div>
+                                    <div class="description">
+                                        <div class="ui basic button">Follow</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% }%>
+                    </div>
+                    <div class="one column row">
 
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
-<% include ../partials/footer %> 
+<% include ../partials/footer %>
