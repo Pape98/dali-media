@@ -9,11 +9,12 @@ function activeTabs(){
   $('.tabular.menu .item').tab();
 }
 function initializeSticky() {
-  $('.ui.sticky')
+    $('.ui.sticky')
     .sticky({
       context: '#context',
       offset: 100
     });
+  
 }
 
 function initializeCardHover() {
@@ -42,29 +43,29 @@ function modifyContent() {
 function movePictureSlider() {
   var rightAngle = $('.right.angle');
   rightAngle.click(function () {
-    hideProfileCards();
-    setTimeout(showProfileCards,2000);;
+    hideProfiles();
+    setTimeout(showProfiles,2000);;
   });
 }
 
-function hideProfileCards() {
-  $('.ui.special.card')
+function hideProfiles() {
+  $('.profileSlider')
     .transition({
       animation: 'fly right',
       reverse: 'auto', // default setting
       interval: 400
     });
-  setTimeout(removeCards,1500);
+  setTimeout(removeProfile,1500);
 }
 
-function removeCards(){
-  $('.ui.special.card')
+function removeProfile(){
+  $('.profileSlider')
   .remove();
 }
 
-function showProfileCards(){
+function showProfiles(){
   setTimeout(getNewProfiles,300);
-  $('.ui.special.card')
+  $('.profileSlider')
     .transition({
       animation: 'fly left',
       reverse: 'auto', // default setting
@@ -75,29 +76,24 @@ function showProfileCards(){
 
 function getNewProfiles() {
   axios.get('http://localhost:3000/api/profiles').then(response => {
-    var newCards ='';
+    var newProfiles ='';
     for (var i = 0; i < 3; ++i) {
-      newCards += createCard(response.data[i]);
+      newProfiles += createProfile(response.data[i]);
     }
-    $('.ui.three.special.cards').append(newCards);
+    console.log(newProfiles)
+    $('.ui.center.aligned.three.column.grid').append(newProfiles);
     
   }).catch(error => console.log(error));
 }
 
-function createCard(profile, idName) {
-  var profileCode = '<div class="ui special card">' +
-    '<div class="content">' +
-    '<div class="right floated meta">Class of ' + profile.year + '</div>' +
-    '<img src="'+profile.picture+'" class="ui avatar image">' +
-    '</div>' +
-    '<div class="image"> ' +
-    '<img src="' + profile.picture + '" style="height: 160px !important;"> ' +
-    '</div> ' +
-    '<div class="content"> ' +
-    '<a class="ui small header">' + profile.name + '</a> ' +
-    '<a href="/profiles/'+profile.ID+'">View Profile</a>'+
-    '</div> ' +
-    '</div>';
+function createProfile(profile, idName) {
+  var profileCode = '<div class="column profileSlider">' +
+  '<div class="ui circular image" >' +
+  '<img src="'+profile.picture+'" style="width: 150px; height: 150px; border: 1.5px #FFD700 solid;">'+
+  '</div>'+
+  '<div class="ui small header">' + profile.name + '</div>'+
+  '<a href="/profiles/'+profile.ID+'">View Profile</a>'+
+   '</div>';
 
   return (profileCode);
 }

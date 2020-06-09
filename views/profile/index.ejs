@@ -1,46 +1,40 @@
 <% include ../partials/header %>
 
 <div class="ui container grid" id="main-grid">
-    <div class="twelve wide column" id="leftPanel">
+    <div class="ten wide column" id="leftPanel">
         <div id="context">
-            <div class="ui stackable grid" id="profileCardGrid">
-                <div class="ui middle aligned one wide column">
+            <div class="ui stackable grid" id="profileSliderGrid">
+                <div class="ui center aligned middle aligned two wide column">
                     <i class="left angle icon circular inverted yellow"></i>
                 </div>
-                <div class=" fourteen wide column">
-                    <div class="ui three special cards">
+                <div class=" twelve wide column">
+                    <div class="ui center aligned three column grid" id="profileSliderGrid">
                         <% for (var i = 0; i < 3; ++i){ %>
-                        <div class="ui special card">
-                            <div class="content">
-                                <div class="right floated meta">Class of <%=selectedProfileData[i].year%></div>
-                                <img src="<%=selectedProfileData[i].picture%>" class="ui avatar image">
+                        <div class="column profileSlider">
+                            <div class="ui circular image" >
+                                <img src="<%=selectedProfileData[i].picture%>" style="width: 150px; height: 150px; border: 1.5px #FFD700 solid;">
                             </div>
-                            <div class="image">
-                                <img src="<%=selectedProfileData[i].picture%>" style="height: 180px !important;">
-                            </div>
-                            <div class="content">
-                                <div class="ui small header"><%=selectedProfileData[i].name%></div>
-                                <a href="/profiles/<%=selectedProfileData[i].ID%>">View Profile</a>
-                            </div>
+                            <div class="ui small header"><%=selectedProfileData[i].name%></div>
+                            <a href="/profiles/<%=selectedProfileData[i].ID%>">View Profile</a>
                         </div>
                         <% } %>
                     </div>
                 </div>
-                <div class="ui middle aligned one wide column">
+                <div class="ui center aligned middle aligned two wide column">
                     <i class="right angle icon circular inverted yellow"></i>
                 </div>
             </div>
             <div class="ui padded segment ">
-                    <img src="/images/profilePicture.png" class="ui bordered centered  small circular image"
+                    <img src="/images/profilePicture.png" class="ui centered  tiny circular image black-border"
                         >
             
 
-                    <div class="ui fluid  big input" style="margin-top: 3vh;">
+                    <div class="ui fluid  input" style="margin-top: 3vh;">
                         <input type="text" placeholder="What's on your mind...?" style="background: #eff2f5;">
                     </div>
                     <div class="ui divider"></div>
 
-                    <div class="ui secondary four item big borderless menu">
+                    <div class="ui secondary four item borderless menu">
                         <a class="item">
                             <i class="icon red big angry"></i>
                             Angry
@@ -71,7 +65,7 @@
                             </div>
                             <div class="content">
                                 <div class="summary">
-                                    <a><%=profile.name%></a> shares his/her favorite quote
+                                    <a href="/profiles/<%=profile.ID%>"><%=profile.name%></a> shares his/her favorite quote
                                     <div class="date">
                                         3 days ago
                                     </div>
@@ -92,7 +86,7 @@
             </div>
         </div>
     </div>
-    <div class="three wide column" id="rightPanel">
+    <div class="four wide column" id="rightPanel">
         <div class="ui rail">
             <div class="ui sticky">
                 <div class="ui basic segments">
