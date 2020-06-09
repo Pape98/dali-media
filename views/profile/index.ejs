@@ -12,7 +12,7 @@
                         <% for (var i = 0; i < 3; ++i){ %>
                         <div class="column profileSlider">
                             <div class="ui circular image" >
-                                <img src="<%=selectedProfileData[i].picture%>" style="width: 150px; height: 150px; border: 1.5px #FFD700 solid;">
+                                <img src="<%=selectedProfileData[i].picture%>" style="width: 150px; height: 150px; border: 1.5px black solid;">
                             </div>
                             <div class="ui small header"><%=selectedProfileData[i].name%></div>
                             <a href="/profiles/<%=selectedProfileData[i].ID%>">View Profile</a>
@@ -113,37 +113,44 @@
                         </div>
                     </div>
                     <% } %>
+
+
+                </div>
+
+
+
+                <div class="ui basic segments">
                     <div class="ui inverted segment">
                         <h4 class="ui inverted header">Who to follow?</h4>
                     </div>
-
                     <% for (var i = 0; i < 3; ++i){ %>
-                    <div class="ui segment">
-                        <div class="ui items">
-                            <div class="item">
-                                <div class="ui tiny circular image">
-                                    <img src="<%=whoToFollow[i].picture%>" style="height: 82px;">
-                                </div>
-                                <div class="content">
-                                    <div class="header"><%=whoToFollow[i].name%></div>
-                                    <div class="meta">
-                                        <span>Class of <%=whoToFollow[i].year%></span>
+                        <div class="ui segment">
+                            <div class="ui items">
+                                <div class="item">
+                                    <div class="ui tiny circular image">
+                                        <img src="<%=whoToFollow[i].picture%>" style="height: 82px;">
                                     </div>
-                                    <div class="description">
-                                        <p><%=whoToFollow[i].major%>%></p>
-                                    </div>
-                                    <div class="extra">
-                                        <div class="ui right floated tiny yellow button">
-                                            <i class="plus icon"></i>
-                                            Follow
+                                    <div class="content">
+                                        <div class="header"><%=whoToFollow[i].name%></div>
+                                        <div class="meta">
+                                            <span>Class of <%=whoToFollow[i].year%></span>
+                                        </div>
+                                        <div class="description">
+                                            <p><%=whoToFollow[i].major%>%></p>
+                                        </div>
+                                        <div class="extra">
+                                            <div class="ui right floated tiny yellow button">
+                                                <i class="plus icon"></i>
+                                                Follow
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <% } %>
+                        <% } %>
                 </div>
+
             </div>
         </div>
     </div>

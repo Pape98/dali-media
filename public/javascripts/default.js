@@ -89,7 +89,7 @@ function getNewProfiles() {
 function createProfile(profile, idName) {
   var profileCode = '<div class="column profileSlider">' +
   '<div class="ui circular image" >' +
-  '<img src="'+profile.picture+'" style="width: 150px; height: 150px; border: 1.5px #FFD700 solid;">'+
+  '<img src="'+profile.picture+'" style="width: 150px; height: 150px; border: 1.5px black solid;">'+
   '</div>'+
   '<div class="ui small header">' + profile.name + '</div>'+
   '<a href="/profiles/'+profile.ID+'">View Profile</a>'+

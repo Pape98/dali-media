@@ -1,0 +1,199 @@
+<% include ../partials/header %>
+
+<div class="" id="main-grid">
+    <div class="ui celled centered grid" style="background:white">
+        <div class="row">
+            <div class="ui center aligned four wide column">
+                <div class="ui circular black-border image " style="width: 200px; height: 200px;">
+                    <img src="<%=data.picture%>">
+                </div>
+                <h1 class="ui header">
+                    <div class="content">
+                        <%=data.name %>
+                        <div class="sub header">Class of <%=data.year %></div>
+                    </div>
+                </h1>
+            </div>
+        </div>
+        <div class="one column row">
+            <div class="ui big  tabular menu centered grid">
+                <div class="item" data-tab="timeline">Timeline</div>
+                <div class="item" data-tab="about">About</div>
+                <div class="active item" data-tab="friends">Friends</div>
+                <div class="item" data-tab="photos">Photos</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui tab basic segment" data-tab="timeline">
+        <div class="ui container centered stackable grid">
+            <div class="seven wide column">
+                <div>
+                    <div class="ui sticky">
+                        <div class="ui segment">
+                            <h3 class="ui grey header">Intro</h3>
+
+                            <div class="ui big list">
+                                <div class="item">
+                                    <i class="users yellow icon"></i>
+                                    <div class="content">
+                                        <%=data.name%>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="marker yellow icon"></i>
+                                    <div class="content">
+                                        <%=data.home%>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="yellow school icon"></i>
+                                    <div class="content">
+                                        Dartmouth College
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui segment">
+                            <h3 class="ui grey header">Some Friends</h3>
+                            <a class="ui black top right attached big label">1652 Friends</a>
+
+                            <div class="three column doubling ui grid">
+                                <% for(var i=0; i < 6; ++i){ %>
+                                <div class="column">
+                                    <img class="ui image" src="<%= shuffledProfileData[i].picture%>" style="height: 110px; width: 200px;">
+                                    <div class="ui header">
+                                        <div class="content">
+                                            <%= shuffledProfileData[i].name%>
+                                            <div class="sub header">45 Mutual Friends</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } %>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="six wide column">
+                <div id="context">
+                    <div id="context">
+                        <div class="ui cards">
+                            <% for(var i = 0; i < 10; ++i){ %>
+                            <div class="ui fluid card">
+                                <div class="content">
+                                    <div class="right floated meta">14h</div>
+                                    <img class="ui avatar image" src="/images/profilePicture.png"> <%=data.name%>
+                                </div>
+                                <div class="ui image">
+                                    <img src="<%= shuffledProfileData[i].picture%>">
+                                </div>
+                                <div class="content">
+                                    <span class="right floated">
+                                        <i class="heart outline like icon"></i>
+                                        17 likes
+                                    </span>
+                                    <i class="comment icon"></i>
+                                    3 comments
+                                </div>
+                                <div class="extra content">
+                                    <span class="ui fluid  input">
+                                        <input type="text" placeholder="Add comment..." style="background: #eff2f5;">
+                                    </span>
+                                </div>
+                            </div>
+                            <%} %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui active tab" data-tab="friends">
+        <div class="ui container centered grid">
+           <div class="row">
+                <div class="fourteen wide column">
+                    <div class="ui padded segment">
+                        <h1 class="ui header">Friends</h1>
+
+                        <div class="ui two column stackable grid">
+                            <div class="column">
+                                <% for(var i=0; i < 15; ++i){ %>
+                                    <div class="ui padded segment ">
+                                        <div class="ui items">
+                                            <div class="item">
+                                              <div class="ui small circular image" style="height: 135px;" >
+                                                <img src="<%= shuffledProfileData[i].picture%>">
+                                              </div>
+                                              <div class="middle aligned content">
+                                                <div class="header">
+                                                    <%= shuffledProfileData[i].name%>
+                                                </div>
+                                                <div class="description">
+                                                  <p>48 Mutual Friends</p>
+                                                </div>
+                                                <div class="extra">
+                                                  <div class="ui right floated button">
+                                                    Friend
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                <% } %>
+                            </div>
+                            <div class="column">
+                                <% for(var i=16; i < 31; ++i){ %>
+                                    <div class="ui padded segment ">
+                                        <div class="ui items">
+                                            <div class="item">
+                                              <div class="ui small circular image" style="height: 135px;" >
+                                                <img src="<%= shuffledProfileData[i].picture%>">
+                                              </div>
+                                              <div class="middle aligned content">
+                                                <div class="header">
+                                                    <%= shuffledProfileData[i].name%>
+                                                </div>
+                                                <div class="description">
+                                                  <p>48 Mutual Friends</p>
+                                                </div>
+                                                <div class="extra">
+                                                  <div class="ui right floated button">
+                                                    Friend
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+
+    <div class="ui tab" data-tab="photos">
+        <div class="ui container padded segment">
+            <h1 class="ui header">Photos</h1>
+            <div class=" four column doubling ui grid">
+                <% for(var i=0; i < 30; ++i){ %>
+                <div class="column">
+                    <img class="ui image" src="<%= shuffledProfileData[i].picture%>" style="height: 300px; width: 300px;">
+                </div>
+                <% } %>
+            </div>
+    
+        </div>
+    </div>
+
+
+
+</div>
+
+<% include ../partials/footer %>

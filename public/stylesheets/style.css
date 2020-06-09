@@ -1,5 +1,10 @@
-.black-border{
-  border : 2px black solid !important;
+.item.active {
+  background:#fcbc09 !important;
+  color: white !important;
+}
+
+.black-border {
+  border: 2px black solid !important;
 }
 
 body {
@@ -11,13 +16,6 @@ html,
 body {
   height: 100%;
   width: 100%;
-}
-
-.title {
-  font-family: Noteworthy;
-  font-style: normal;
-  font-weight: bolder;
-  font-size: 1.7em;
 }
 
 #navbar {
@@ -36,6 +34,13 @@ textarea {
   border: none;
   background: #eff2f5;
   overflow: auto;
+}
+
+.title {
+  font-family: Noteworthy;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 1.7em;
 }
 
 #main-grid {
