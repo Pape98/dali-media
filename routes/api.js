@@ -5,7 +5,7 @@ var helpers = require('../helpers/functions')
 
 router.get('/profiles', function(req,res,next){
     var shuffledProfileData = helpers.shuffle(profileData);
-    var selectedProfileData = shuffledProfileData.slice(0, 4);
+    var selectedProfileData = shuffledProfileData.slice(0, 3);
     res.json(selectedProfileData);
 })
 
