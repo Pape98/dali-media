@@ -18,4 +18,11 @@ router.get('/', function (req, res, next) {
   });
 });
 
+router.get('/:id',function(req,res,next){
+  var id = req.params.id;
+  var data = profileData.find(a => a.ID === id);
+  console.log(data)
+  res.render('profile/show', {data:data});
+});
+
 module.exports = router;

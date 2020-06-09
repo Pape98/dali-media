@@ -1,32 +1,26 @@
 <% include ../partials/header %>
 
 <div class="ui container grid" id="main-grid">
-    <div class="twelve wide column" id="leftPanel">
+    <div class="ten wide column" id="leftPanel">
         <div id="context">
-            <div class="ui stackable grid">
+            <div class="ui stackable grid" id="profileCardGrid">
                 <div class="ui middle aligned one wide column">
                     <i class="left angle icon circular inverted yellow"></i>
                 </div>
                 <div class=" fourteen wide column">
-                    <div class="ui three special  cards">
+                    <div class="ui three special cards">
                         <% for (var i = 0; i < 3; ++i){ %>
                         <div class="ui special card">
                             <div class="content">
                                 <div class="right floated meta">Class of <%=selectedProfileData[i].year%></div>
                                 <img src="<%=selectedProfileData[i].picture%>" class="ui avatar image">
                             </div>
-                            <div class="blurring dimmable image">
-                                <div class="ui dimmer">
-                                    <div class="content">
-                                        <div class="center">
-                                            <div class="ui inverted button">View</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <img src="<%=selectedProfileData[i].picture%>" style="height: 160px !important;">
+                            <div class="image">
+                                <img src="<%=selectedProfileData[i].picture%>" style="height: 180px !important;">
                             </div>
                             <div class="content">
-                                <a class="ui small header"><%=selectedProfileData[i].name%></a>
+                                <div class="ui small header"><%=selectedProfileData[i].name%></div>
+                                <a href="/profiles/<%=selectedProfileData[i].ID%>">View Profile</a>
                             </div>
                         </div>
                         <% } %>
@@ -40,7 +34,7 @@
                 <div class="ui stackable padded grid margin-0">
                     <div class="row">
                         <div class="ui middle aligned four wide column">
-                            <img class="ui circular small image" src="images/profilePicture.png" alt="profilePicture">
+                            <img class="ui circular small image" src="/images/profilePicture.png" alt="profilePicture">
                         </div>
                         <div class="nine wide column">
                             <div class="ui form">
@@ -113,7 +107,7 @@
             </div>
         </div>
     </div>
-    <div class="four wide column" id="rightPanel">
+    <div class="three wide column" id="rightPanel">
         <div class="ui rail">
             <div class="ui sticky">
                 <div class="ui basic segments">

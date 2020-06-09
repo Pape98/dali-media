@@ -21,24 +21,33 @@ body {
   padding: 0 !important;
 }
 
-textarea{
+textarea {
   border: none;
-  background:  #eff2f5;
-  overflow: auto; 
+  background: #eff2f5;
+  overflow: auto;
 }
 
-#main-grid{
+#main-grid {
   height: 100%;
-  margin-top: 7vh !important;
+  margin-top: 8.7vh !important;
 }
 
-.angle:hover { /* Chrome/Opera/Safari */
- background: black !important;
+.angle:hover {
+  /* Chrome/Opera/Safari */
+  background: black !important;
 }
 
 
 @media only screen and (max-width: 1125px) {
-  #rightPanel, #navbar{
+
+  #rightPanel,
+  #navbar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 773px) {
+  #profileCardGrid {
     display: none;
   }
 }
