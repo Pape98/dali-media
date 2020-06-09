@@ -21,7 +21,7 @@ router.get('/', function (req, res, next) {
 router.get('/:id',function(req,res,next){
   var id = req.params.id;
   var data = profileData.find(a => a.ID === id);
-  console.log(data)
+  console.log(helpers);
   res.render('profile/show', {data:data});
 });
 

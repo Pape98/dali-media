@@ -1,9 +1,13 @@
 $(document).ready(function () {
   initializeSticky();
   initializeCardHover();
-  movePictureSlider()
+  movePictureSlider();
+  activeTabs();
 })
 
+function activeTabs(){
+  $('.tabular.menu .item').tab();
+}
 function initializeSticky() {
   $('.ui.sticky')
     .sticky({

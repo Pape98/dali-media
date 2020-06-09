@@ -1,7 +1,7 @@
 <% include ../partials/header %>
 
 <div class="ui container grid" id="main-grid">
-    <div class="ten wide column" id="leftPanel">
+    <div class="twelve wide column" id="leftPanel">
         <div id="context">
             <div class="ui stackable grid" id="profileCardGrid">
                 <div class="ui middle aligned one wide column">
@@ -30,49 +30,34 @@
                     <i class="right angle icon circular inverted yellow"></i>
                 </div>
             </div>
-            <div class="ui padded segment">
-                <div class="ui stackable padded grid margin-0">
-                    <div class="row">
-                        <div class="ui middle aligned four wide column">
-                            <img class="ui circular small image" src="/images/profilePicture.png" alt="profilePicture">
-                        </div>
-                        <div class="nine wide column">
-                            <div class="ui form">
-                                <div class="field">
-                                    <div class="ui corner labeled icon input">
-                                        <div class="ui  corner label">
-                                            <i class="brain red icon"></i>
-                                        </div>
-                                        <textarea style="background:#eff2f5"
-                                            placeholder="What's on your mind ... ?"></textarea>
-                                    </div>
-                                    <!-- <textarea type="text" rows="8" style="border: none; background:#eff2f5;"
-                                        placeholder="What's on your mind ... ?"></textarea> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="three wide column">
-                            <div class="ui vertical buttons">
-                                <button class="ui red button">
-                                    <i class="icon angry"></i>
-                                    Angry
-                                </button>
-                                <button class="ui orange button">
-                                    <i class="icon angry"></i>
-                                    Tired
-                                </button>
-                                <button class="ui yellow button">
-                                    <i class="icon meh"></i>
-                                    Alright
-                                </button>
-                                <button class="ui green button">
-                                    <i class="icon smile beam"></i>
-                                    Angry
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+            <div class="ui padded segment ">
+                    <img src="/images/profilePicture.png" class="ui centered  small circular image"
+                        style="border: 3px black solid;">
+            
 
+                    <div class="ui fluid  big input" style="margin-top: 3vh;">
+                        <input type="text" placeholder="What's on your mind...?" style="background: #eff2f5;">
+                    </div>
+                    <div class="ui divider"></div>
+
+                    <div class="ui secondary four item big borderless menu">
+                        <a class="item">
+                            <i class="icon red big angry"></i>
+                            Angry
+                        </a>
+                        <a class="item">
+                            <i class="icon orange big angry"></i>
+                            Tired
+                        </a>
+                        <a class="item">
+                            <i class="icon yellow big angry"></i>
+                            Alright
+                        </a>
+                        <a class="item">
+                            <i class="icon green big angry"></i>
+                            Happy
+                        </a>
+                    
                 </div>
 
             </div>

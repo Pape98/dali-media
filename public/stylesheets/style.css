@@ -2,6 +2,12 @@ body {
   background: #eff2f5;
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
 .title {
   font-family: Noteworthy;
   font-style: normal;
@@ -29,7 +35,7 @@ textarea {
 
 #main-grid {
   height: 100%;
-  margin-top: 8.7vh !important;
+  margin-top: 7.2vh !important;
 }
 
 .angle:hover {
