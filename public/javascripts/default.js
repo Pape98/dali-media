@@ -71,7 +71,7 @@ function removeCards(){
 
 function getNewProfiles() {
   axios.get('http://localhost:3000/api/profiles').then(response => {
-    var newCards;
+    var newCards ='';
     for (var i = 0; i < 3; ++i) {
       newCards += createCard(response.data[i]);
     }
