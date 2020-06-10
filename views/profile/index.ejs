@@ -25,32 +25,31 @@
                 </div>
             </div>
             <div class="ui padded segment ">
-                    <img src="/images/profilePicture.png" class="ui centered  tiny circular image black-border"
-                        >
-            
-
+                <form action="" class="ui form" id="thoughtForm" method="POST" action="/profiles" >
                     <div class="ui fluid  input" style="margin-top: 3vh;">
-                        <input type="text" placeholder="What's on your mind...?" style="background: #eff2f5;">
+                        <input type="text" name="thoughts" placeholder="What's on your mind...?" style="background: #eff2f5;">
                     </div>
+                </form>
+                  
                     <div class="ui divider"></div>
 
                     <div class="ui secondary four item borderless menu">
-                        <a class="item">
+                        <button type="submit" form="thoughtForm" class="item">
                             <i class="icon red big angry"></i>
                             Angry
-                        </a>
-                        <a class="item">
+                        </button>
+                        <button type="submit" form="thoughtForm"  class="item">
                             <i class="icon orange big angry"></i>
                             Tired
-                        </a>
-                        <a class="item">
+                        </button>
+                        <button type="submit" form="thoughtForm"  class="item">
                             <i class="icon yellow big angry"></i>
                             Alright
-                        </a>
-                        <a class="item">
+                        </button>
+                        <button type="submit" form="thoughtForm" class="item">
                             <i class="icon green big angry"></i>
                             Happy
-                        </a>
+                        </button>
                     
                 </div>
 
@@ -101,7 +100,7 @@
                                     <img src="<%=friends[i].picture%>" style="height: 82px;">
                                 </div>
                                 <div class="content">
-                                    <div class="header"> <i class="heart red icon"></i><%=friends[i].name%></div>
+                                    <a href="/profiles/<%=friends[i].ID%>"  class="header"> <i class="heart red icon"></i><%=friends[i].name%></a>
                                     <div class="meta">
                                         <span>Class of <%=friends[i].year%></span>
                                     </div>
@@ -131,7 +130,7 @@
                                         <img src="<%=whoToFollow[i].picture%>" style="height: 82px;">
                                     </div>
                                     <div class="content">
-                                        <div class="header"><%=whoToFollow[i].name%></div>
+                                        <a href="/profiles/<%=whoToFollow[i].ID%>" class="header"><%=whoToFollow[i].name%></a>
                                         <div class="meta">
                                             <span>Class of <%=whoToFollow[i].year%></span>
                                         </div>

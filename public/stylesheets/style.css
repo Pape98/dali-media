@@ -1,7 +1,7 @@
-.item.active {
+/* .item.active {
   background:#fcbc09 !important;
   color: white !important;
-}
+} */
 
 .black-border {
   border: 2px black solid !important;
@@ -45,7 +45,7 @@ textarea {
 
 #main-grid {
   height: 100%;
-  margin-top: 7.2vh !important;
+  margin-top: 7.0vh !important;
 }
 
 .angle:hover {

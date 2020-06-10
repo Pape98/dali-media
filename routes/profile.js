@@ -1,4 +1,5 @@
 var express = require('express');
+var fs = require('fs');
 var router = express.Router();
 
 var profileData = require('../data/DALI_Data.json');
@@ -18,6 +19,17 @@ router.get('/', function (req, res, next) {
   });
 });
 
+router.post('/',function(req,res,next){
+  var filePath = 'data/posts.txt';
+  var newPost = JSON.stringify(req.body, null, 4);
+  fs.appendFile(filePath,newPost,function(err){
+    if (err) throw err;
+    fs.readFile(filePath,'utf8',function(err, data) {
+      res.json(JSON.parse(data));
+    });
+  });
+});
+
 router.get('/:id',function(req,res,next){
   var shuffledProfileData = helpers.shuffle(profileData);
   var id = req.params.id;
@@ -25,5 +37,6 @@ router.get('/:id',function(req,res,next){
   console.log(helpers);
   res.render('profile/show', {data:data,shuffledProfileData:shuffledProfileData});
 });
+
 
 module.exports = router;
