@@ -59,8 +59,8 @@ textarea {
 
 
 @media only screen and (max-width: 1445px) {
- #leftPanel,
- #rightPanel,
+ /* #leftPanel,
+ #rightPanel, */
  #navbar{
    display: none;
  }

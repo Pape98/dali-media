@@ -1,13 +1,13 @@
 <% include ../partials/header %>
 
 <div class="ui centered grid" id="main-grid">
-    <div class=" three wide column" id="leftPanel">
+    <div class=" large screen only three wide column" id="leftPanel">
         <div class="ui inverted raised segment">
             <h4 class="ui header">Your Latest Posts</h4>
         </div>
         <% for(var i = posts['posts'].length - 1 ; i > -1; --i){ %>
         <div class="ui raised segment">
-            <div class="ui big comments">
+            <div class="ui large comments">
                 <div class="comment">
                     <a class="avatar">
                         <img src="/images/profilePicture.png">
@@ -29,150 +29,174 @@
 
     <div class="eight wide column" id="middlePanel">
         <div id="context">
-            <div class="one column row">
-                <div class="ui stackable grid" id="profileSliderGrid">
-                    <div class="ui center aligned middle aligned two wide column">
-                       <i class="left angle icon circular inverted yellow"></i>
-                    </div>
-                    <div class=" twelve wide column">
-                       <div class="ui center aligned three column black grid" id="profileSliderGrid">
-                          <% for (var i = 0; i < 3; ++i){ %>
-                          <div class="column profileSlider">
-                             <div class="ui small image">
-                                <img class="ui circular image" src="<%=selectedProfileData[i].picture%>"
-                                   style="width: 150px; height: 150px;">
-                             </div>
-                             <div class="ui inverted small header"><%=selectedProfileData[i].name%></div>
-                             <a href="/profiles/<%=selectedProfileData[i].ID%>">View Profile</a>
-                          </div>
-                          <% } %>
-                       </div>
-                    </div>
-                    <div class="ui center aligned middle aligned two wide column">
-                       <i class="right angle icon circular inverted yellow"></i>
-                    </div>
-                 </div>
-            </div>
-            <div class="one column row">
-                <div class="ui padded raised segment ">
-                    <form action="" class="ui form" id="thoughtForm" method="POST" action="/profiles">
-                       <div class="ui fluid  input" style="margin-top: 3vh;">
-                          <input type="text" name="post" placeholder="What's on your mind...?" style="background: #eff2f5;">
-                       </div>
-                    </form>
-                    <div class="ui divider"></div>
-                    <div class="ui secondary one item borderless menu">
-                       <button class="ui fluid secondary blue button" type="submit" form="thoughtForm" class="item">
-                       Post
-                       </button>
-                    </div>
-                 </div>
-            </div>
-            <div class="one column row">
-                <div class="ui raised segments">
-                    <% profileData.forEach(function(profile){%>
-                        <div class="ui padded segment">
-                            <div class="ui big feed">
-                                <div class="event">
-                                    <div class="label">
-                                        <img src="<%=profile.picture%>">
-                                    </div>
-                                    <div class="content">
-                                        <div class="summary">
-                                            <a href="/profiles/<%=profile.ID%>"><%=profile.name%></a> shares his/her
-                                            favorite quote
-                                            <div class="date">
-                                                3 days ago
+            <div class="ui centered grid">
+                <div class="row">
+                    <div class="eleven wide column">
+                        <div class="ui padded raised segment ">
+                            
+                            
+                                <div class="ui large items">
+                                    <div class="item">
+                                        <div class="ui tiny circular image">
+                                            <img src="/images/profilePicture.png" style="height: 82px;">
+                                        </div>
+                                        <div class="content">
+                                            <div href="" class="ui small header">What's on your mind?</div>
+                            
+                                            <div class="description">
+                                                <form action="" class="ui form" id="thoughtForm" method="POST" action="/profiles">
+                                                    <div class="ui fluid  input" style="margin-top: 3vh;">
+                                                       <input type="text" name="post" placeholder="What's on your mind...?" style="background: #eff2f5;">
+                                                    </div>
+                                                 </form>
                                             </div>
                                         </div>
-                                        <div class="extra text">
-                                            <%=profile.quote%>
+                                    </div>
+                                </div>
+                                <div class="ui divider"></div>
+                            <div class="ui secondary one item borderless menu">
+                               <button class="ui fluid secondary blue button" type="submit" form="thoughtForm" class="item">
+                               Post
+                               </button>
+                            </div>
+                                
+                            
+                         </div>
+                    </div>
+                    
+ 
+                </div>
+                <div class="large screen only row">
+                    <div class="sixteen wide column">
+                        <div class="ui stackable grid" id="profileSliderGrid">
+                            <div class="ui center aligned middle aligned two wide column">
+                               <i class="left angle icon circular inverted yellow"></i>
+                            </div>
+                            <div class=" twelve wide column">
+                               <div class="ui center aligned three column black grid" id="profileSliderGrid">
+                                  <% for (var i = 0; i < 3; ++i){ %>
+                                  <div class="column profileSlider">
+                                     <div class="ui small image">
+                                        <img class="ui circular image" src="<%=selectedProfileData[i].picture%>"
+                                           style="width: 150px; height: 150px;">
+                                     </div>
+                                     <div class="ui small header"><%=selectedProfileData[i].name%></div>
+                                     <a href="/profiles/<%=selectedProfileData[i].ID%>">View Profile</a>
+                                  </div>
+                                  <% } %>
+                               </div>
+                            </div>
+                            <div class="ui center aligned middle aligned two wide column">
+                               <i class="right angle icon circular inverted yellow"></i>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+                
+                <div class="one column row">
+                    <div class="ui raised segments">
+                        <% profileData.forEach(function(profile){%>
+                            <div class="ui padded segment">
+                                <div class="ui large feed">
+                                    <div class="event">
+                                        <div class="label">
+                                            <img src="<%=profile.picture%>">
                                         </div>
-                                        <div class="meta">
-                                            <a class="like">
-                                                <i class="like icon"></i> 5 Likes
-                                            </a>
+                                        <div class="content">
+                                            <div class="summary">
+                                                <a href="/profiles/<%=profile.ID%>"><%=profile.name%></a> shares his/her
+                                                favorite quote
+                                                <div class="date">
+                                                    3 days ago
+                                                </div>
+                                            </div>
+                                            <div class="extra text">
+                                                <%=profile.quote%>
+                                            </div>
+                                            <div class="meta">
+                                                <a class="like">
+                                                    <i class="like icon"></i> 5 Likes
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <% }) %>
-                </div>
-            </div>
-        </div>
-        
-   
-</div>
-
-<div class="three wide column" id="rightPanel">
-    <div>
-        <div class="ui sticky">
-            <div class="ui raised basic segments">
-                <div class="ui inverted segment">
-                    <h4 class="ui header">Some of your friends</h4>
-                </div>
-                <% for (var i = 0; i < 2; ++i){ %>
-                <div class="ui segment">
-                    <div class="ui items">
-                        <div class="item">
-                            <div class="ui tiny circular image">
-                                <img src="<%=friends[i].picture%>" style="height: 82px;">
-                            </div>
-                            <div class="content">
-                                <a href="/profiles/<%=friends[i].ID%>" class="ui small header"> <i
-                                        class="heart red icon"></i><%=friends[i].name%></a>
-                                <div class="meta">
-                                    <span>Class of <%=friends[i].year%></span>
-                                </div>
-                                <div class="description">
-                                    <p><%=friends[i].major%>%></p>
-                                </div>
-                            </div>
-                        </div>
+                            <% }) %>
                     </div>
                 </div>
-                <% } %>
-
-
-            </div>
-
-
-
-            <div class="ui raised basic segments">
-                <div class="ui inverted segment">
-                    <h4 class="ui inverted header">Who to follow?</h4>
-                </div>
-                <% for (var i = 0; i < 3; ++i){ %>
-                <div class="ui segment">
-                    <div class="ui items">
-                        <div class="item">
-                            <div class="ui tiny circular image">
-                                <img src="<%=whoToFollow[i].picture%>" style="height: 82px;">
-                            </div>
-                            <div class="content">
-                                <a href="/profiles/<%=whoToFollow[i].ID%>" class="header"><%=whoToFollow[i].name%></a>
-                                <div class="meta">
-                                    <span>Class of <%=whoToFollow[i].year%></span>
-                                </div>
-                                <div class="description">
-                                    <p><%=whoToFollow[i].major%>%></p>
-                                </div>
-                                <div class="extra">
-                                    <div class="ui right floated tiny yellow button">
-                                        <i class="plus icon"></i>
-                                        Follow
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <% } %>
-            </div>
-
+            </div>  
         </div>
     </div>
-</div>
+
+    <div class="large screen only three wide column" id="rightPanel">
+        <div>
+            <div class="ui container sticky">
+                <div class="ui raised basic segments">
+                    <div class="ui inverted segment">
+                        <h4 class="ui header">Some of your friends</h4>
+                    </div>
+                    <% for (var i = 0; i < 2; ++i){ %>
+                    <div class="ui segment">
+                        <div class="ui large items">
+                            <div class="item">
+                                <div class="ui tiny circular image">
+                                    <img src="<%=friends[i].picture%>" style="height: 82px;">
+                                </div>
+                                <div class="content">
+                                    <a href="/profiles/<%=friends[i].ID%>" class="ui small header"> <i
+                                            class="heart red icon"></i><%=friends[i].name%></a>
+                                    <div class="meta">
+                                        <span>Class of <%=friends[i].year%></span>
+                                    </div>
+                                    <div class="description">
+                                        <p><%=friends[i].major%>%></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+
+
+                </div>
+
+
+
+                <div class="ui raised basic segments">
+                    <div class="ui inverted segment">
+                        <h4 class="ui inverted header">Who to follow?</h4>
+                    </div>
+                    <% for (var i = 0; i < 3; ++i){ %>
+                    <div class="ui segment">
+                        <div class="ui large items">
+                            <div class="item">
+                                <div class="ui tiny circular image">
+                                    <img src="<%=whoToFollow[i].picture%>" style="height: 82px;">
+                                </div>
+                                <div class="content">
+                                    <a href="/profiles/<%=whoToFollow[i].ID%>" class="ui small header"><%=whoToFollow[i].name%></a>
+                                    <div class="meta">
+                                        <span>Class of <%=whoToFollow[i].year%></span>
+                                    </div>
+                                    <div class="description">
+                                        <p><%=whoToFollow[i].major%>%></p>
+                                    </div>
+                                    <div class="extra">
+                                        <div class="ui right floated tiny yellow button">
+                                            <i class="plus icon"></i>
+                                            Follow
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>
 <% include ../partials/footer %>
