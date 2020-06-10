@@ -1,27 +1,26 @@
 $(document).ready(function () {
-  initializeSticky();
-  initializeCardHover();
   movePictureSlider();
+  initializeSticky();
   activeTabs();
+  modifyContent() ;
 })
 
 function activeTabs(){
   $('.tabular.menu .item').tab();
 }
 function initializeSticky() {
-    $('.ui.sticky')
+  var mySticky =  $('.ui.sticky');
+ 
+ if (mySticky.is(":hidden") === false);
+    
+  mySticky
     .sticky({
       context: '#context',
       offset: 100
     });
-  
+
 }
 
-function initializeCardHover() {
-  $('.special.cards .image').dimmer({
-    on: 'hover'
-  });
-}
 
 function getWindowWidth() {
   var bodyWidth = $('body').innerWidth();
@@ -30,13 +29,15 @@ function getWindowWidth() {
 
 function modifyContent() {
   var bodyWidth = getWindowWidth();
-  var leftPanel = $('#leftPanel');
-  if (bodyWidth < 1125) {
-    leftPanel.removeClass('ten wide column');
-    leftPanel.addClass('sixteen wide column');
+  var middlePanel = $('#middlePanel');
+  console.log(bodyWidth);
+  if (bodyWidth < 1445) {
+    console.log("here");
+    middlePanel.removeClass('eight wide column');
+    middlePanel.addClass('sixteen wide column');
   } else {
-    leftPanel.removeClass('sixteen wide column');
-    leftPanel.addClass('ten wide column');
+    middlePanel.removeClass('sixteen wide column');
+    middlePanel.addClass('eight wide column');
   }
 }
 
