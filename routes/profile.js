@@ -15,7 +15,8 @@ router.get('/', function (req, res, next) {
     profileData: profileData,
     selectedProfileData: selectedProfileData,
     friends: friends,
-    whoToFollow: whoToFollow
+    whoToFollow: whoToFollow,
+    posts:postData
   });
 });
 
@@ -28,6 +29,7 @@ router.post('/',function(req,res,next){
     posts.posts.push(newPost);
     fs.writeFile(filePath,JSON.stringify(posts),function(err){
       if(err) throw err;
+      postData = posts
       res.redirect('/profiles');
     })
   })

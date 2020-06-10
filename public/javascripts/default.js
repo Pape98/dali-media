@@ -51,7 +51,7 @@ function movePictureSlider() {
 function hideProfiles() {
   $('.profileSlider')
     .transition({
-      animation: 'fly right',
+      animation: 'slide down',
       reverse: 'auto', // default setting
       interval: 400
     });

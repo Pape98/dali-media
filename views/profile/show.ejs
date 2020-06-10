@@ -97,7 +97,7 @@
                                 <div class="column">
                                     <img class="ui image" src="<%= shuffledProfileData[i].picture%>" style="height: 110px; width: 200px;">
                                     <div class="ui header">
-                                        <a  href="<%= shuffledProfileData[i].name%>" class="content">
+                                        <a  href="<%= shuffledProfileData[i].ID%>" class="content">
                                             <%= shuffledProfileData[i].name%>
                                             <div class="sub header">45 Mutual Friends</div>
                                         </a>
@@ -215,7 +215,7 @@
     <div class="ui tab" data-tab="photos">
         <div class="ui container padded segment">
             <h1 class="ui header">Photos</h1>
-            <div class=" four column doubling ui grid">
+            <div class=" four column doubling ui stackable centered grid">
                 <% for(var i=0; i < 30; ++i){ %>
                 <div class="column">
                     <img class="ui image" src="<%= shuffledProfileData[i].picture%>" style="height: 300px; width: 300px;">

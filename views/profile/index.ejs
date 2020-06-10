@@ -1,91 +1,107 @@
 <% include ../partials/header %>
 
-<div class="ui container grid" id="main-grid">
-    <div class="ten wide column" id="leftPanel">
-        <div id="context">
-            <div class="ui stackable grid" id="profileSliderGrid">
-                <div class="ui center aligned middle aligned two wide column">
-                    <i class="left angle icon circular inverted yellow"></i>
-                </div>
-                <div class=" twelve wide column">
-                    <div class="ui center aligned three column grid" id="profileSliderGrid">
-                        <% for (var i = 0; i < 3; ++i){ %>
-                        <div class="column profileSlider">
-                            <div class="ui circular image" >
-                                <img src="<%=selectedProfileData[i].picture%>" style="width: 150px; height: 150px; border: 1.5px black solid;">
-                            </div>
-                            <div class="ui small header"><%=selectedProfileData[i].name%></div>
-                            <a href="/profiles/<%=selectedProfileData[i].ID%>">View Profile</a>
-                        </div>
-                        <% } %>
-                    </div>
-                </div>
-                <div class="ui center aligned middle aligned two wide column">
-                    <i class="right angle icon circular inverted yellow"></i>
-                </div>
+<div class="ui grid" id="main-grid">
+    <div class="row">
+        <div class="three wide column" id="leftPanel">
+            <div class="ui inverted segment">
+                <h4 class="ui header">Your Latest Posts</h4>
             </div>
-            <div class="ui padded segment ">
-                <form action="" class="ui form" id="thoughtForm" method="POST" action="/profiles" >
-                    <div class="ui fluid  input" style="margin-top: 3vh;">
-                        <input type="text" name="post" placeholder="What's on your mind...?" style="background: #eff2f5;">
-                    </div>
-                </form>
-                  
-                    <div class="ui divider"></div>
-
-                    <div class="ui secondary four item borderless menu">
-                        <button type="submit" form="thoughtForm" class="item">
-                            <i class="icon red big angry"></i>
-                            Angry
-                        </button>
-                        <button type="submit" form="thoughtForm"  class="item">
-                            <i class="icon orange big angry"></i>
-                            Tired
-                        </button>
-                        <button type="submit" form="thoughtForm"  class="item">
-                            <i class="icon yellow big angry"></i>
-                            Alright
-                        </button>
-                        <button type="submit" form="thoughtForm" class="item">
-                            <i class="icon green big angry"></i>
-                            Happy
-                        </button>
-                    
-                </div>
-
-            </div>
-            <div>
-                <% profileData.forEach(function(profile){%>
-                <div class="ui segment">
-                    <div class="ui feed">
-                        <div class="event">
-                            <div class="label">
-                                <img src="<%=profile.picture%>">
+            <% for(var i = posts['posts'].length - 1 ; i > -1; --i){ %>
+            <div class="ui segment">
+                <div class="ui comments">
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="/images/profilePicture.png">
+                        </a>
+                        <div class="content">
+                            <a class="author">Pape S. Traore</a>
+                            <div class="metadata">
+                                <div class="date">2 days ago</div>
                             </div>
-                            <div class="content">
-                                <div class="summary">
-                                    <a href="/profiles/<%=profile.ID%>"><%=profile.name%></a> shares his/her favorite quote
-                                    <div class="date">
-                                        3 days ago
-                                    </div>
-                                </div>
-                                <div class="extra text">
-                                    <%=profile.quote%>
-                                </div>
-                                <div class="meta">
-                                    <a class="like">
-                                        <i class="like icon"></i> 5 Likes
-                                    </a>
-                                </div>
+                            <div class="text">
+                                <%=posts['posts'][i]['post']%>
                             </div>
                         </div>
                     </div>
                 </div>
-                <% }) %>
             </div>
+            <%}%>
+             
+           
+        </div>
+        <div class="ten wide column" id="middlePanel">
+            <div class ="ui text container " id="context">
+                <div class="ui stackable grid" id="profileSliderGrid">
+                    <div class="ui center aligned middle aligned two wide column">
+                        <i class="left angle icon circular inverted yellow"></i>
+                    </div>
+                    <div class=" twelve wide column">
+                        <div class="ui center aligned three column grid" id="profileSliderGrid">
+                            <% for (var i = 0; i < 3; ++i){ %>
+            <div class="column profileSlider">
+                <div class="ui circular image">
+                    <img src="<%=selectedProfileData[i].picture%>"
+                        style="width: 150px; height: 150px; border: 1.5px black solid;">
+                </div>
+                <div class="ui small header"><%=selectedProfileData[i].name%></div>
+                <a href="/profiles/<%=selectedProfileData[i].ID%>">View Profile</a>
+            </div>
+            <% } %>
         </div>
     </div>
-    <div class="four wide column" id="rightPanel">
+    <div class="ui center aligned middle aligned two wide column">
+        <i class="right angle icon circular inverted yellow"></i>
+    </div>
+    </div>
+    <div class="ui padded segment ">
+        <form action="" class="ui form" id="thoughtForm" method="POST" action="/profiles">
+            <div class="ui fluid  input" style="margin-top: 3vh;">
+                <input type="text" name="post" placeholder="What's on your mind...?" style="background: #eff2f5;">
+            </div>
+        </form>
+    
+        <div class="ui divider"></div>
+    
+        <div class="ui secondary one item borderless menu">
+            <button class="ui fluid secondary blue button" type="submit" form="thoughtForm" class="item">
+                Post
+            </button>
+    
+        </div>
+    
+    </div>
+    <div>
+        <% profileData.forEach(function(profile){%>
+        <div class="ui segment">
+            <div class="ui feed">
+                <div class="event">
+                    <div class="label">
+                        <img src="<%=profile.picture%>">
+                    </div>
+                    <div class="content">
+                        <div class="summary">
+                            <a href="/profiles/<%=profile.ID%>"><%=profile.name%></a> shares his/her favorite quote
+                            <div class="date">
+                                3 days ago
+                            </div>
+                        </div>
+                        <div class="extra text">
+                            <%=profile.quote%>
+                        </div>
+                        <div class="meta">
+                            <a class="like">
+                                <i class="like icon"></i> 5 Likes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+    </div>
+        </div>
+        <div class=" three wide column" id="rightPanel">
         <div class="ui rail">
             <div class="ui sticky">
                 <div class="ui basic segments">
@@ -100,7 +116,8 @@
                                     <img src="<%=friends[i].picture%>" style="height: 82px;">
                                 </div>
                                 <div class="content">
-                                    <a href="/profiles/<%=friends[i].ID%>"  class="header"> <i class="heart red icon"></i><%=friends[i].name%></a>
+                                    <a href="/profiles/<%=friends[i].ID%>" class="header"> <i
+                                            class="heart red icon"></i><%=friends[i].name%></a>
                                     <div class="meta">
                                         <span>Class of <%=friends[i].year%></span>
                                     </div>
@@ -112,45 +129,46 @@
                         </div>
                     </div>
                     <% } %>
-
-
+    
+    
                 </div>
-
-
-
+    
+    
+    
                 <div class="ui basic segments">
                     <div class="ui inverted segment">
                         <h4 class="ui inverted header">Who to follow?</h4>
                     </div>
                     <% for (var i = 0; i < 3; ++i){ %>
-                        <div class="ui segment">
-                            <div class="ui items">
-                                <div class="item">
-                                    <div class="ui tiny circular image">
-                                        <img src="<%=whoToFollow[i].picture%>" style="height: 82px;">
+                    <div class="ui segment">
+                        <div class="ui items">
+                            <div class="item">
+                                <div class="ui tiny circular image">
+                                    <img src="<%=whoToFollow[i].picture%>" style="height: 82px;">
+                                </div>
+                                <div class="content">
+                                    <a href="/profiles/<%=whoToFollow[i].ID%>" class="header"><%=whoToFollow[i].name%></a>
+                                    <div class="meta">
+                                        <span>Class of <%=whoToFollow[i].year%></span>
                                     </div>
-                                    <div class="content">
-                                        <a href="/profiles/<%=whoToFollow[i].ID%>" class="header"><%=whoToFollow[i].name%></a>
-                                        <div class="meta">
-                                            <span>Class of <%=whoToFollow[i].year%></span>
-                                        </div>
-                                        <div class="description">
-                                            <p><%=whoToFollow[i].major%>%></p>
-                                        </div>
-                                        <div class="extra">
-                                            <div class="ui right floated tiny yellow button">
-                                                <i class="plus icon"></i>
-                                                Follow
-                                            </div>
+                                    <div class="description">
+                                        <p><%=whoToFollow[i].major%>%></p>
+                                    </div>
+                                    <div class="extra">
+                                        <div class="ui right floated tiny yellow button">
+                                            <i class="plus icon"></i>
+                                            Follow
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <% } %>
+                    </div>
+                    <% } %>
                 </div>
-
+    
             </div>
+        </div>
         </div>
     </div>
 </div>

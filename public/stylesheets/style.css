@@ -30,6 +30,10 @@ body {
   padding: 0 !important;
 }
 
+#context{
+  
+}
+
 textarea {
   border: none;
   background: #eff2f5;
@@ -45,7 +49,7 @@ textarea {
 
 #main-grid {
   height: 100%;
-  margin-top: 7.0vh !important;
+  margin: 7.0vh 0 0 0!important;
 }
 
 .angle:hover {
@@ -55,15 +59,9 @@ textarea {
 
 
 @media only screen and (max-width: 1125px) {
-
-  #rightPanel,
-  #navbar {
-    display: none;
-  }
+ 
 }
 
 @media only screen and (max-width: 773px) {
-  #profileCardGrid {
-    display: none;
-  }
+  
 }
