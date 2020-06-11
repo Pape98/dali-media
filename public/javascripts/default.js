@@ -53,12 +53,20 @@ function activatePopup() {
     on: "focus",
   });
 
-  $('.post.item')
-  .popup({
-    popup : $('#newPostPopup'),
-    on    : 'click'
-  })
-;
+  $(".post.item").popup({
+    popup: $("#newPostPopup"),
+    on: "click",
+  });
+
+  $(".search.item").popup({
+    popup: $("#searchPopup"),
+    on: "click",
+  });
+
+  $(".viewPost.item").popup({
+    popup: $("#viewPostPopup"),
+    on: "click",
+  });
 
   // $('.search.item').click(function(){
   //   $(this).popup();
