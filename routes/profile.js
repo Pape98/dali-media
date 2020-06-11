@@ -6,20 +6,6 @@ var profileData = require("../data/DALI_Data.json");
 var helpers = require("../helpers/functions");
 var postData = require("../data/posts.json");
 
-router.get("/", function (req, res, next) {
-  var shuffledProfileData = helpers.shuffle(profileData);
-  var selectedProfileData = shuffledProfileData.slice(0, 4);
-  var friends = shuffledProfileData.slice(4, 7);
-  var whoToFollow = shuffledProfileData.slice(7, 10);
-  res.render("profile/index", {
-    profileData: profileData,
-    selectedProfileData: selectedProfileData,
-    friends: friends,
-    whoToFollow: whoToFollow,
-    posts: postData,
-  });
-});
-
 router.post("/", function (req, res, next) {
   var filePath = "data/posts.json";
   var newPost = req.body;
@@ -35,6 +21,20 @@ router.post("/", function (req, res, next) {
   });
 });
 
+
+router.get("/", function (req, res, next) {
+  var shuffledProfileData = helpers.shuffle(profileData);
+  var selectedProfileData = shuffledProfileData.slice(0, 4);
+  var friends = shuffledProfileData.slice(4, 7);
+  var whoToFollow = shuffledProfileData.slice(7, 10);
+  res.render("profile/index", {
+    profileData: profileData,
+    selectedProfileData: selectedProfileData,
+    friends: friends,
+    whoToFollow: whoToFollow,
+    posts: postData,
+  });
+});
 router.get("/:id", function (req, res, next) {
   var shuffledProfileData = helpers.shuffle(profileData);
   var id = req.params.id;

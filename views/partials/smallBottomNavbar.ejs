@@ -18,14 +18,20 @@
 
 </div>
 
-<div class="ui flowing popup transition hidden" id="newPostPopup">
+<div class="ui fluid popup transition hidden" id="newPostPopup">
     <h4>What's on your mind?</h4>
-    <form action="" class="ui form" id="thoughtForm" method="POST" action="/profiles">
+    <form action="" class="ui form" id="thoughtForm2" method="POST" action="/profiles">
         <div class="ui fluid input">
             <input data-content="Your post will appear on the left panel." class="prompt" type="text" name="post"
                 placeholder="..." style="background: #eff2f5;">
         </div>
     </form>
+    <div class="ui divider"></div>
+    <div class="ui secondary one item borderless center aligned menu">
+       <button class="ui centered fluid secondary blue button" type="submit" form="thoughtForm2" class="item">
+       Post
+       </button>
+    </div>
 </div>
 
 <div class="ui flowing popup transition hidden" id="searchPopup">
