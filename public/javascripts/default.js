@@ -9,6 +9,7 @@ $(document).ready(function () {
   quoteSlideShow();
   searchProfile();
   activatePopup();
+  activateModal();
 });
 
 var slideShowCounter = 0;
@@ -42,6 +43,12 @@ function activeTabs() {
   $(".tabular.menu .item").tab();
 }
 
+function activateModal() {
+  $(".viewPost.item").click(function () {
+    $(".long.modal").modal("show");
+  });
+}
+
 function activateSidebar() {
   $(".hamburger").click(function () {
     $(".ui.sidebar").sidebar("toggle");
@@ -63,10 +70,10 @@ function activatePopup() {
     on: "click",
   });
 
-  $(".viewPost.item").popup({
-    popup: $("#viewPostPopup"),
-    on: "click",
-  });
+  // $(".viewPost.item").popup({
+  //   popup: $("#viewPostPopup"),
+  //   on: "click",
+  // });
 
   // $('.search.item').click(function(){
   //   $(this).popup();
