@@ -14,15 +14,13 @@ var slideShowCounter = 0;
 var profileData = getData();
 
 function searchProfile() {
-
-  $('.ui.search')
-        .search({
-            // change search endpoint to a custom endpoint by manipulating apiSettings
-            apiSettings: {
-                url: '/api/profiles/search/?q={query}',
-            },
-            showNoResults: true
-        });
+  $(".ui.search").search({
+    // change search endpoint to a custom endpoint by manipulating apiSettings
+    apiSettings: {
+      url: "/api/profiles/search/?q={query}",
+    },
+    showNoResults: true,
+  });
 }
 
 function changeQuote() {
