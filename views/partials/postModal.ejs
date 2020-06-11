@@ -1,0 +1,25 @@
+<div class="ui long modal">
+    <div class="ui inverted segment">
+        <h4 class="ui header">Your Latest Posts</h4>
+    </div>
+    <% for(var i = posts['posts'].length - 1 ; i > -1; --i){ %>
+    <div class="ui basic segment">
+        <div class="ui comments">
+            <div class="comment">
+                <a class="avatar">
+                    <img src="/images/profilePicture.png">
+                </a>
+                <div class="content">
+                    <a class="author">Pape S. Traore</a>
+                    <div class="metadata">
+                        <div class="date">2 days ago</div>
+                    </div>
+                    <p class="text">
+                        <%=posts['posts'][i]['post']%>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%}%>
+</div>
