@@ -8,6 +8,7 @@ $(document).ready(function () {
   activateSidebar();
   quoteSlideShow();
   searchProfile();
+  activatePopup();
 });
 
 var slideShowCounter = 0;
@@ -46,6 +47,24 @@ function activateSidebar() {
     $(".ui.sidebar").sidebar("toggle");
   });
 }
+
+function activatePopup() {
+  $(".prompt").popup({
+    on: "focus",
+  });
+
+  $('.post.item')
+  .popup({
+    popup : $('#newPostPopup'),
+    on    : 'click'
+  })
+;
+
+  // $('.search.item').click(function(){
+  //   $(this).popup();
+  // })
+}
+
 function initializeSticky() {
   var mySticky = $(".ui.sticky");
 
@@ -56,8 +75,6 @@ function initializeSticky() {
     offset: 100,
     bottomOffset: 10000,
   });
-
-  $(".ui.sticky").sticky("refresh");
 }
 
 function getWindowWidth() {
@@ -74,6 +91,7 @@ function modifyContent() {
   } else {
     middlePanel.removeClass("sixteen wide column");
     middlePanel.addClass("eight wide column");
+    $(".ui.sticky").sticky("refresh");
   }
 }
 

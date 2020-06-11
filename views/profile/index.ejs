@@ -27,7 +27,7 @@
        </div>
        <% for(var i = posts['posts'].length - 1 ; i > -1; --i){ %>
        <div class="ui raised segment">
-          <div class="ui large comments">
+          <div class="ui comments">
              <div class="comment">
                 <a class="avatar">
                 <img src="/images/profilePicture.png">
@@ -49,9 +49,9 @@
     <div class="eight wide column" id="middlePanel">
        <div id="context">
           <div class="ui centered grid" style="margin-bottom: 10vh 0;">
-             <div class="row">
+             <div class="large screen only row">
                 <div class="fourteen wide column">
-                   <div class="ui padded raised segment ">
+                   <div class="ui raised segment ">
                       <div class="ui large items">
                          <div class="item">
                             <div class="ui tiny circular image">
@@ -61,8 +61,8 @@
                                <div href="" class="ui small header">What's on your mind?</div>
                                <div class="description">
                                   <form action="" class="ui form" id="thoughtForm" method="POST" action="/profiles">
-                                     <div class="ui fluid  input" style="margin-top: 3vh;">
-                                        <input type="text" name="post" placeholder="What's on your mind...?" style="background: #eff2f5;">
+                                     <div class="ui fluid input">
+                                        <input data-content="Your post will appear on the left panel" class="prompt" type="text" name="post" placeholder="..." style="background: #eff2f5;">
                                      </div>
                                   </form>
                                </div>
@@ -107,8 +107,8 @@
                 <div class="fourteen wide column">
                    <div class="ui raised segments">
                       <% profileData.forEach(function(profile){%>
-                      <div class="ui padded segment">
-                         <div class="ui large feed">
+                      <div class="ui segment">
+                         <div class="ui feed">
                             <div class="event">
                                <div class="label">
                                   <img src="<%=profile.picture%>">
@@ -149,7 +149,7 @@
                 </div>
                 <% for (var i = 0; i < 2; ++i){ %>
                 <div class="ui segment">
-                   <div class="ui large items">
+                   <div class="ui items">
                       <div class="item">
                          <div class="ui tiny circular image">
                             <img src="<%=friends[i].picture%>" style="height: 82px;">
@@ -175,7 +175,7 @@
                 </div>
                 <% for (var i = 0; i < 2; ++i){ %>
                 <div class="ui segment">
-                   <div class="ui large items">
+                   <div class="ui items">
                       <div class="item">
                          <div class="ui tiny circular image">
                             <img src="<%=whoToFollow[i].picture%>" style="height: 82px;">

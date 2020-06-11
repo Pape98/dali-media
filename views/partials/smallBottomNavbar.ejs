@@ -1,11 +1,37 @@
-<div class="ui bottom fixed inverted three item labeled icon menu" id="smallBottomNavbar">
+
+
+<div class="ui bottom fixed inverted five item labeled icon menu" id="smallBottomNavbar">
     <a class="item" href="/profiles">
         <i class="large home big icon"></i>
     </a>
     <a class="item">
-        <i class="large envelope big icon"></i>
-    </a>
-    <a class="item">
         <i class="large bell big icon"></i>
     </a>
+    <a class="post item" id="edit">
+        <i class="plus icon"></i>
+    </a>
+    <a class="search item">
+        <i class="large search icon"></i>
+    </a>
+    <a class="viewPost item">
+        <i class="large eye icon"></i>
+    </a>
 </div>
+
+<div class="ui fluid popup transition hidden" id="newPostPopup">
+    <h3>What's on your mind?</h3>
+    <form action="" class="ui form" id="thoughtForm" method="POST" action="/profiles">
+        <div class="ui fluid input">
+           <input data-content="Your post will appear on the left panel." class="prompt" type="text" name="post" placeholder="..." style="background: #eff2f5;">
+        </div>
+     </form>
+</div>
+
+<div class="ui fluid popup transition hidden" id="searchPopup">
+    
+</div>
+
+<div class="ui fluid popup transition hidden" id="viewPostPopup">
+    
+</div>
+
