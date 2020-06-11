@@ -4,7 +4,16 @@ $(document).ready(function () {
   activeTabs();
   modifyContent();
   activateSidebar();
+  quoteSlideShow();
 });
+
+
+function quoteSlideShow(){
+  axios.get('http://localhost:3000/api/profiles/30')
+  .then((response) => { 
+    console.log(response)
+  }).catch((err) => console.log(err));
+}
 
 function activeTabs() {
   $(".tabular.menu .item").tab();
@@ -91,12 +100,21 @@ function getNewProfiles() {
 }
 
 function createProfile(profile, idName) {
+
+  var bodyWidth = getWindowWidth();
+  var profileStyle;
+  if(bodyWidth > 1445){
+    profileStyle = 'style ="width: 8vw;height: 150px;border: 2px #fcbc09  solid;"'
+  } else{
+    profileStyle = 'style ="width: 82px;height: 82px;border: 2px #fcbc09  solid;"'
+
+  }
   var profileCode =
     '<div class="column profileSlider">' +
     '<div class="ui circular image" >' +
     '<img src="' +
-    profile.picture +
-    '" style="width: 150px; height: 150px;">' +
+    profile.picture + 
+    '"' + profileStyle+'>' +
     "</div>" +
     '<div class="ui small header">' +
     profile.name +
