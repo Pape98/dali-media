@@ -1,1 +1,21 @@
-{"posts":[{"post":"Looks like everything works so far. I am still not satisfied about the design though. Maybe I will work on it later."},{"post":"The  profile pictures are giving me a hard time. The fact that they are given to me in different sizes makes it even harder for me to scale appropriately."},{"post":"But on a less serious note. Game of Thrones season 8 was definitely trash. They butchered the whole series with that final season. Poor dragon queen."},{"post":"Now I am having trouble with format of the menu for small screens. Seems like display:inline is messing things up."},{"post":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas consequat eleifend erat, quis viverra lorem condimentum sed. Integer varius libero."},{"post":"I have tried my hardest to make it as responsive as possible. I might have missed certain things though."},{"post":"I like really the quote slider. What do you think of it?"},{"post":"For some reason, on mobile the styling takes some time to appear."},{"post":"You might have to clear your cache at some point. It seems to be messing things up."}]}
+{
+    "posts": [{
+        "post": "Looks like everything works so far. I am still not satisfied about the design though. Maybe I will work on it later."
+    }, {
+        "post": "The  profile pictures are giving me a hard time. The fact that they are given to me in different sizes makes it even harder for me to scale appropriately."
+    }, {
+        "post": "But on a less serious note. Game of Thrones season 8 was definitely trash. They butchered the whole series with that final season. Poor dragon queen."
+    }, {
+        "post": "Now I am having trouble with format of the menu for small screens. Seems like display:inline is messing things up."
+    }, {
+        "post": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas consequat eleifend erat, quis viverra lorem condimentum sed. Integer varius libero."
+    }, {
+        "post": "I have tried my hardest to make it as responsive as possible. I might have missed certain things though."
+    }, {
+        "post": "I like really the quote slider. What do you think of it?"
+    }, {
+        "post": "For some reason, on mobile the styling takes some time to appear."
+    }, {
+        "post": "You might have to clear your cache at some point. It seems to be messing things up."
+    }]
+}

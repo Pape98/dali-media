@@ -1,14 +1,3 @@
-var faker = require('faker');
-
-function fakeImages() {
-    var images = [];
-    for (var i = 0; i < 20; ++i) {
-        var image = faker.image.image()
-        images.push(image)
-    }
-    return images
-}
-
 // Source: https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
 function shuffle(array) {
     let counter = array.length;
@@ -40,4 +29,3 @@ function search(nameKey, myArray){
 
 exports.search = search;
 exports.shuffle = shuffle;
-exports.fakeImages = fakeImages;
