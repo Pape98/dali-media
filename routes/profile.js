@@ -39,7 +39,6 @@ router.get('/:id',function(req,res,next){
   var shuffledProfileData = helpers.shuffle(profileData);
   var id = req.params.id;
   var data = profileData.find(a => a.ID === id);
-  console.log(helpers);
   res.render('profile/show', {data:data,shuffledProfileData:shuffledProfileData});
 });
 

@@ -1,4 +1,4 @@
-import {getData} from './DALI_Data.js';
+import { getData } from "./DALI_Data.js";
 
 $(document).ready(function () {
   movePictureSlider();
@@ -7,23 +7,36 @@ $(document).ready(function () {
   modifyContent();
   activateSidebar();
   quoteSlideShow();
+  searchProfile();
 });
-
 
 var slideShowCounter = 0;
 var profileData = getData();
 
-function changeQuote(){
-  $('#quote').empty();
-  $('.ui.circular.image.quote').empty();
-  $('#quote').append(profileData[slideShowCounter].quote);
-  $('.ui.circular.image.quote').append('<img src="'+profileData[slideShowCounter].picture +'">');
-  console.log(profileData[slideShowCounter].quote)
+function searchProfile() {
+
+  $('.ui.search')
+        .search({
+            // change search endpoint to a custom endpoint by manipulating apiSettings
+            apiSettings: {
+                url: '/api/profiles/search/?q={query}',
+            },
+            showNoResults: true
+        });
+}
+
+function changeQuote() {
+  $("#quote").empty();
+  $(".ui.circular.image.quote").empty();
+  $("#quote").append(profileData[slideShowCounter].quote);
+  $(".ui.circular.image.quote").append(
+    '<img src="' + profileData[slideShowCounter].picture + '">'
+  );
   ++slideShowCounter;
 }
 
 function quoteSlideShow() {
-  setInterval(changeQuote,4000);
+  setInterval(changeQuote, 4000);
 }
 
 function activeTabs() {
@@ -58,7 +71,6 @@ function modifyContent() {
   var bodyWidth = getWindowWidth();
   var middlePanel = $("#middlePanel");
   if (bodyWidth < 1445) {
-    console.log("here");
     middlePanel.removeClass("eight wide column");
     middlePanel.addClass("sixteen wide column");
   } else {
@@ -105,7 +117,6 @@ function getNewProfiles() {
       for (var i = 0; i < 3; ++i) {
         newProfiles += createProfile(response.data[i]);
       }
-      console.log(newProfiles);
       $(".ui.center.aligned.three.column.grid").append(newProfiles);
     })
     .catch((error) => console.log(error));

@@ -1,11 +1,7 @@
-export function getData(){
-  return data;
-}
-
-var data = [{
+[{
     "ID": "1",
     "name": "Justin Luo",
-    "url":"/profiles/1","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/30e6cf1283ab1600d4a9778bd0853a7ef0ecffcd660652e875bfc45fdc214af3/IMG_0152.jpg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -27,12 +23,11 @@ var data = [{
     "favoriteArtist": "Cage the Elephant",
     "favoriteColor": "Blue",
     "phoneType": "iOS"
-  
   },
   {
     "ID": "2",
     "name": "Jasmine Mai",
-    "url":"/profiles/2","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/1fbd3a5a0c7c84062b88ee2c6af2dff06af0edc30e316b0086c1389fff2faf4a/IMG_5087.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -58,7 +53,7 @@ var data = [{
   {
     "ID": "3",
     "name": "Mira Ram",
-    "url":"/profiles/3","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/97f2abb104caac7e66af289551ea7c18feae409f899a461ac5d2caa826a54829/03908531_500D_49B0_BD80_023020D17D9D.jpeg",
     "gender": "Other",
     "American Indian or Alaska Native": "",
@@ -84,7 +79,7 @@ var data = [{
   {
     "ID": "4",
     "name": "Yeonjae Park",
-    "url":"/profiles/4","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/0c4be435c2bdd63ed6ce42ba543ebec812f044e033ef31deaef1abcae8e2cc1a/01tDlE7PTuGJhgYqMNv2QA_thumb_8647.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -110,7 +105,7 @@ var data = [{
   {
     "ID": "5",
     "name": "Alan Lu",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/3785badf80fd48dd7166598202895370ea149c0f33a4f39e994bda201d923936/fullsizeoutput_1dbc.jpeg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -136,7 +131,7 @@ var data = [{
   {
     "ID": "6",
     "name": "Abby Starr",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/aac12089f8c0cca3bf741176ae42282b67c01dd95039ce7a1e9bf098f64e0390/IMG_5810.JPG",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -162,7 +157,7 @@ var data = [{
   {
     "ID": "7",
     "name": "Aidan O'Day",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/e1f53b9c21799eb22f6e2a2eb2381416c3df8274fbcbcb96b60ba11bcf5b127a/IMG_20190322_120044.jpg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -188,7 +183,7 @@ var data = [{
   {
     "ID": "8",
     "name": "Louis Murerwa",
-    "url":"/profiles/","year": "'21",
+    "year": "'21",
     "picture": "https://api.typeform.com/responses/files/89e5aeba9a3fc7a53fe4f2b8e8b47bff0a34efd79744f5dbdadac0c18637255e/IMG_3750.JPG",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -214,7 +209,7 @@ var data = [{
   {
     "ID": "9",
     "name": "Teddy Ni",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/92cfd33d4846b859c4f4d6a7da09b4477ee351eda2222e61bdd6a64f70b2e211/Headshot.jpg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -240,7 +235,7 @@ var data = [{
   {
     "ID": "10",
     "name": "Wylie Kasai",
-    "url":"/profiles/","year": "'22",
+    "year": "'22",
     "picture": "https://api.typeform.com/responses/files/6719e1b31715751ab0da01f81f569805d730cd3826495a9f5d3a117a3c8c6e48/DALI_prof.jpg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -266,7 +261,7 @@ var data = [{
   {
     "ID": "11",
     "name": "Lindsey Hodel",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/2485a3ad39f2ae35ec5639e5615a9055566ce53c83f84adc9b1aa0a029b5bbfe/IMG_0178.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -292,7 +287,7 @@ var data = [{
   {
     "ID": "12",
     "name": "Christina Bae",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/9f7786a619dd53f0cacfe10864a2fe4f7cc7ae738b6bc27deb946af949dc0f43/IMG_1495.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -318,7 +313,7 @@ var data = [{
   {
     "ID": "13",
     "name": "Sia Peng",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/9e6dcd6100c412a58b91779bf440747c486d7d45d8938c692b39eab2c0181319/2018_4.JPG",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -344,7 +339,7 @@ var data = [{
   {
     "ID": "14",
     "name": "Aatman Vora",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/659fc2a714640814c4bf02dbf3f102d47908ad8ddee548b404b901cf0bc7b12e/aatu_pic.jpg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -370,7 +365,7 @@ var data = [{
   {
     "ID": "15",
     "name": "Kylee Sibilia",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/9093ca44add18eee4ea822d586ecb48185d4e5b1cd9e142aa150ece1d8450cce/867E90AB_3871_4597_99A3_A88D2803EDFD.jpeg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -396,7 +391,7 @@ var data = [{
   {
     "ID": "16",
     "name": "Sara Falkson",
-    "url":"/profiles/","year": "'22",
+    "year": "'22",
     "picture": "https://api.typeform.com/responses/files/52dde73cd75c83bdd2a5de99359d185bb03d25f918d846d1f060a71846b0fd42/Screen_Shot_2019_03_31_at_1.58.23_PM.png",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -422,7 +417,7 @@ var data = [{
   {
     "ID": "17",
     "name": "Kristie Chow",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/56047abc93442abeac3a705337892f67f2bd418fb9326d412805a977097382ce/Kristie_Chow_Portrait.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -448,7 +443,7 @@ var data = [{
   {
     "ID": "18",
     "name": "Izzy  Parizeau",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/04d60093e6e3077b1eb5e5bb191e8105decc6b43d4166768fafe3c34274f9e4f/Screen_Shot_2019_03_06_at_12.51.55_PM.png",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -474,7 +469,7 @@ var data = [{
   {
     "ID": "19",
     "name": "Justin Baltazar",
-    "url":"/profiles/","year": "'21",
+    "year": "'21",
     "picture": "https://api.typeform.com/responses/files/8e9e41b72f37e560d5cf90265a44644f8c10c36085735789e422057b2221de83/20180730_132611.jpg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -500,7 +495,7 @@ var data = [{
   {
     "ID": "20",
     "name": "Cindy Shen",
-    "url":"/profiles/","year": "'21",
+    "year": "'21",
     "picture": "https://api.typeform.com/responses/files/949c3a426d799ab92e2e11b13cb75cfe926cd5a02a860bd976df0364ea3a18bc/Screen_Shot_2019_03_31_at_1.41.20_PM.png",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -526,7 +521,7 @@ var data = [{
   {
     "ID": "21",
     "name": "Anuj Varma",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/06f4369d4001b2bc7197d86c5733ff775187d9a1aa9a071894f5a34f21f2f117/anuj.jpeg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -552,7 +547,7 @@ var data = [{
   {
     "ID": "22",
     "name": "Annika Kouhia",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/8a9c41ef306511c3152ec4a1a91abbd4c675c0027a16dac7d4a3a9371a15d0b6/813981C0_0FDC_4A65_9EDB_EF5E71E8D6D6.jpeg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -578,7 +573,7 @@ var data = [{
   {
     "ID": "23",
     "name": "Chikezie Prosper Onungwa",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/8b6d1d14cd72e98c5ca8b88344a7ff23aeb19683ebee774692746c3a6d59157c/me.jpg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -604,7 +599,7 @@ var data = [{
   {
     "ID": "24",
     "name": "Gillian Yue",
-    "url":"/profiles/","year": "'22",
+    "year": "'22",
     "picture": "https://api.typeform.com/responses/files/eca16c30edeea76371adae13581dbf94d6aa2cd7d372ac37a5ea42c585c95ed0/IMG_6432.JPG",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -630,7 +625,7 @@ var data = [{
   {
     "ID": "26",
     "name": "Dorothy",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/38646cbaae0484682087f295840572e35c10af3ffe051f870e847c9fbcdfb41b/cat.jpeg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -656,7 +651,7 @@ var data = [{
   {
     "ID": "27",
     "name": "Laya Indukuri",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/acc16d77c15e1874628e08be39c103d80c709dd5525b61f42b249dd984f92e83/dali_pic.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -682,7 +677,7 @@ var data = [{
   {
     "ID": "28",
     "name": "Yakoob Khan",
-    "url":"/profiles/","year": "'21",
+    "year": "'21",
     "picture": "https://api.typeform.com/responses/files/f1120832c1c4e502366c6daab55b171f2b66cd4db6df984f1aa2eb0e1ac9d829/yakoob_khan.jpg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -708,7 +703,7 @@ var data = [{
   {
     "ID": "29",
     "name": "Emma Langfitt",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/730655d52a68f26eb96e39f68175ca5493fd4b2388413067f70913cc791ff9e5/profpic.JPG",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -734,7 +729,7 @@ var data = [{
   {
     "ID": "30",
     "name": "Jeong Tae Bang",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/4c1f7dad768ccbb5e741beef87fdfb25b0b17e9f4c5066618aff287e26379501/Visa_Photo.jpg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -760,7 +755,7 @@ var data = [{
   {
     "ID": "31",
     "name": "Emma Rafkin",
-    "url":"/profiles/","year": "'21",
+    "year": "'21",
     "picture": "https://api.typeform.com/responses/files/b1f7dc1667fed3740c37246cc4aeff19c58c686d28735c29476b47e6dd60355f/IMG_9583.jpeg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -786,7 +781,7 @@ var data = [{
   {
     "ID": "32",
     "name": "Hailey Scherer",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/9fdf1adbce47e2348abe3674690da38f129cb4bbc907269f4cf917a763c09a68/F15E2391_3F71_420F_A52D_DDBE48EC27A5.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -812,7 +807,7 @@ var data = [{
   {
     "ID": "33",
     "name": "Khiel Mantilla",
-    "url":"/profiles/","year": "'21",
+    "year": "'21",
     "picture": "https://api.typeform.com/responses/files/d0450a234e0dae4c53eb703f4f2ed7519111db07daa4c114e9dca6d9b2e5a0fe/khiel.jpg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -838,7 +833,7 @@ var data = [{
   {
     "ID": "34",
     "name": "Kunal Rathi",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/d6c3eccb0de8952a7fad7a94e4d45a4ad7206119e0a1e6a28b4e3a858c55081c/profile.jpg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -864,7 +859,7 @@ var data = [{
   {
     "ID": "35",
     "name": "Janvi Kalra",
-    "url":"/profiles/","year": "'21",
+    "year": "'21",
     "picture": "https://api.typeform.com/responses/files/3139275ad206d31a62bf1cab85f37ab88f5914d65e055ff21729a8d1535d3423/E7C81723_02AC_43C7_A93E_3FCFB23DE89A.jpeg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -890,7 +885,7 @@ var data = [{
   {
     "ID": "36",
     "name": "Ijemma Onwuzulike",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/371c1a5e8781025e49be5c168521c572c983be4996437dbda0511de4d84f508e/me.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -916,7 +911,7 @@ var data = [{
   {
     "ID": "37",
     "name": "Angela Li",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/be1372a0aeae4ea51fa4ddcef4a9fd4d43cfed0405d2dcd30eccc89eefe19bb1/propic.JPG",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -942,7 +937,7 @@ var data = [{
   {
     "ID": "38",
     "name": "Grace Thompson",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/75c356a722335301884fd9ba50ddcd410cf5712f1589cadc5a654b338dc4e316/IMG_1311.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -968,7 +963,7 @@ var data = [{
   {
     "ID": "39",
     "name": "Ileana Sung",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/dd04a7396e2e01a30001a539c2e878b3197629382f4559ac68e1a90a0ad63949/IMG_0333.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -994,7 +989,7 @@ var data = [{
   {
     "ID": "40",
     "name": "Namya Malik",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/76a02976a05babf79a06ea88ff0368944f8f2ea9d5807b29735f7b0668260ae8/IMG_0276.JPG",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -1020,7 +1015,7 @@ var data = [{
   {
     "ID": "41",
     "name": "Zirui Hao",
-    "url":"/profiles/","year": "'22",
+    "year": "'22",
     "picture": "https://api.typeform.com/responses/files/d122bfac499f39916e0f996bf3470a96b9f2b02af94b12bca18a34ba57daeec2/20190109_035748516_iOS.jpg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -1046,7 +1041,7 @@ var data = [{
   {
     "ID": "42",
     "name": "Raul Rodriguez",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/a0d808c8a5fdb95a9042c09effb518d2c0a7ddc655207415110124df1faa5b92/20202791.jpeg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -1072,7 +1067,7 @@ var data = [{
   {
     "ID": "43",
     "name": "Callie Page",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/77dfa9bf3de227ad7ef42349a0fdb061f7b83c330f354dfdb62a7e716b30a7c3/IMG_1047.PNG",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -1098,7 +1093,7 @@ var data = [{
   {
     "ID": "44",
     "name": "Lylia Eng",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/8eec06fc30d170b64960522669ea6cd44190bf4bc686ed8bbc1d7408cff7c18b/DSC_0625.JPG",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -1124,7 +1119,7 @@ var data = [{
   {
     "ID": "45",
     "name": "Juan Castano",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/05062d7e56acda12a346e909dc69e19b6ad8413d33ca981f6c30ad6d1e41ec46/JUAN.png",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -1150,7 +1145,7 @@ var data = [{
   {
     "ID": "46",
     "name": "Nitasha Kochar",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/595f9287d92bf2a423b4767e25c114f4ffbcb0044aa2b9756544168f06abc98d/jungle_pic.jpeg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -1176,7 +1171,7 @@ var data = [{
   {
     "ID": "47",
     "name": "Donia Tung",
-    "url":"/profiles/","year": "'22",
+    "year": "'22",
     "picture": "https://api.typeform.com/responses/files/9bf73e86a764c4eb067314d494c68b13f2737adeebf725ef5b054bf1e5f59d71/IMG_0557.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -1202,7 +1197,7 @@ var data = [{
   {
     "ID": "48",
     "name": "Sofia Stanescu-Bellu",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/25fc8db837fc32685590df7e626bee27ac3d501ae67c17f768b76d2abfbf9df8/profile_pic.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -1228,7 +1223,7 @@ var data = [{
   {
     "ID": "49",
     "name": "Cat Zhao",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/1d6534c397c5c60ed4759e478c0be810dd287d82f599714b934fa1db2641f3b1/Catherine_Zhao.JPG",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -1254,7 +1249,7 @@ var data = [{
   {
     "ID": "50",
     "name": "Kaitlyn Hahn",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/07972b9b269206e85a6468ef3cae5ef9b5acb2f66bee110666d807483727e3ba/14434834_10154534734034817_1292614361366608297_o.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -1280,7 +1275,7 @@ var data = [{
   {
     "ID": "51",
     "name": "Annie Ke",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/c4a8466500997e05e7ce3b80886e9e268ee4feb9b510bafc76cd27f814f9c144/DSC_2640.JPG",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -1306,7 +1301,7 @@ var data = [{
   {
     "ID": "52",
     "name": "Anca Balaceanu",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/121b698acafd45e6eb3cd776f7cf316ceda65d3e2c60a36a2a57ea33bd4b00a3/anca_balaceanu.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -1332,7 +1327,7 @@ var data = [{
   {
     "ID": "53",
     "name": "Varsha Iyer",
-    "url":"/profiles/","year": "'21",
+    "year": "'21",
     "picture": "https://api.typeform.com/responses/files/49d1d5b3049979abd5a47008bc18be805ee012fc93253d0124d9ba570c887d4e/ResumeImage.jpeg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -1358,7 +1353,7 @@ var data = [{
   {
     "ID": "54",
     "name": "Faustino Cortina",
-    "url":"/profiles/","year": "'21",
+    "year": "'21",
     "picture": "https://api.typeform.com/responses/files/f818333d34d012d11a2838e477f79f3cee6aa9f72336d16cc3dc1671f0557d9d/IMG_3757.jpg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -1384,7 +1379,7 @@ var data = [{
   {
     "ID": "55",
     "name": "Thomas Monfre",
-    "url":"/profiles/","year": "'21",
+    "year": "'21",
     "picture": "https://api.typeform.com/responses/files/f3bf8ef750780f3a7b59dc7406420ead866d364dbe6a6d0a1d5f4a33660fab9a/IMG_2078_2.JPG",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -1410,7 +1405,7 @@ var data = [{
   {
     "ID": "56",
     "name": "Madeline Hess",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/b11a157f979d92ccbf935b37fb6fb30bc04ab192d66c54e9ba7bcae0d39fda52/photo.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -1436,7 +1431,7 @@ var data = [{
   {
     "ID": "57",
     "name": "Celine Guan",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/5ff453470223ef06d5762b5e4c78437f58c9c054cd6b7295aba3bc71a398c8b0/IMG_2811.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -1462,7 +1457,7 @@ var data = [{
   {
     "ID": "58",
     "name": "Henry Foster",
-    "url":"/profiles/","year": "'21",
+    "year": "'21",
     "picture": "https://api.typeform.com/responses/files/93878353ff615272e8b19add11b692524f9d0bd4a76a9ce47995e3d22e4f3ac9/IMG_2346.JPG",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -1488,7 +1483,7 @@ var data = [{
   {
     "ID": "59",
     "name": "Jane Lee",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/0eb904f1712da48fa953c4a35fd4a0c827293174d649fa72e28cbf9a91900243/Profile_Picture_1.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -1514,7 +1509,7 @@ var data = [{
   {
     "ID": "60",
     "name": "Wes Kendrick",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/d2db74fac87dab995bfeddaede92e6774580f2658b0722a3fbacc7e323c47499/wes.jpg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -1540,7 +1535,7 @@ var data = [{
   {
     "ID": "61",
     "name": "Adam Rinehouse",
-    "url":"/profiles/","year": "'19",
+    "year": "'19",
     "picture": "https://api.typeform.com/responses/files/0b0d83a38985ddf52fb944862a16a9183e79fca9d66ab76cbea0439159db5e33/IMG_0010.JPG",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -1566,7 +1561,7 @@ var data = [{
   {
     "ID": "62",
     "name": "Emma Demers",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/d131a830a8a05e83b991fb1b633d74d3de5aedcfd3daba7c9bf8d09238361edb/E4BACBD8_6E53_49FD_80A1_522E5330A52B.JPG",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -1592,7 +1587,7 @@ var data = [{
   {
     "ID": "63",
     "name": "Zack Johnson",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/6e24bbd00293b1b6608863bb865370922d641af087f73049a740e23c02aea769/11C492A7_6BD1_45DE_9295_C4A13F5336C7.jpeg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -1618,7 +1613,7 @@ var data = [{
   {
     "ID": "64",
     "name": "Sara S. Kim",
-    "url":"/profiles/","year": "'22",
+    "year": "'22",
     "picture": "https://api.typeform.com/responses/files/56c579ce179fc97fb66eddb22214ef101dd18c12e15a6927747a20e5e79421b9/IMG_6776.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",
@@ -1644,7 +1639,7 @@ var data = [{
   {
     "ID": "65",
     "name": "Syed Tanveer",
-    "url":"/profiles/","year": "'21",
+    "year": "'21",
     "picture": "https://api.typeform.com/responses/files/81a2e689e64418ca8bbb0d1eabe45303e1ad1f4b7eb522cc9687289336549c1a/Image_from_iOS.png",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -1670,7 +1665,7 @@ var data = [{
   {
     "ID": "66",
     "name": "John McCambridge",
-    "url":"/profiles/","year": "'22",
+    "year": "'22",
     "picture": "https://api.typeform.com/responses/files/c5f9719d9453133b1e954af096f540987b955f30ab1e63cfc6005ad8634e5a8f/JOHN.jpg",
     "gender": "Male",
     "American Indian or Alaska Native": "",
@@ -1696,7 +1691,7 @@ var data = [{
   {
     "ID": "67",
     "name": "Morgan sorbaro",
-    "url":"/profiles/","year": "'20",
+    "year": "'20",
     "picture": "https://api.typeform.com/responses/files/ce5cc43c0a18a1f3d1e96946acb30bc47c27849afb35ed45b86e8361806340b9/49899297_1318080248332069_1616764297398976512_n.jpg",
     "gender": "Female",
     "American Indian or Alaska Native": "",

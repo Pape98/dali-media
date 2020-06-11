@@ -41,9 +41,9 @@ body {
 }
 
 #profileShow {
-  max-width: 250px;
-  max-height: 250px;
-  margin-top: 5vh;
+  max-width: 10vw;
+  max-height: 10vw;
+  margin-top: 8vh;
 }
 
 #quoteSlideShow{

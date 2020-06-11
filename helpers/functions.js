@@ -29,6 +29,15 @@ function shuffle(array) {
 
     return array;
 }
+// Source: https://stackoverflow.com/questions/12462318/find-a-value-in-an-array-of-objects-in-javascript
+function search(nameKey, myArray){
+    for (var i=0; i < myArray.length; i++) {
+        if (myArray[i].name === nameKey) {
+            return myArray[i];
+        }
+    }
+}
 
+exports.search = search;
 exports.shuffle = shuffle;
 exports.fakeImages = fakeImages;
