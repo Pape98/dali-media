@@ -31,7 +31,7 @@
         <div id="context">
             <div class="ui centered grid">
                 <div class="row">
-                    <div class="eleven wide column">
+                    <div class="fourteen wide column">
                         <div class="ui padded raised segment ">
                             
                             
@@ -40,7 +40,7 @@
                                         <div class="ui tiny circular image">
                                             <img src="/images/profilePicture.png" style="height: 82px;">
                                         </div>
-                                        <div class="content">
+                                        <div class="middle aligned content">
                                             <div href="" class="ui small header">What's on your mind?</div>
                             
                                             <div class="description">
@@ -66,9 +66,9 @@
                     
  
                 </div>
-                <div class="large screen only row">
+                <div class="row">
                     <div class="sixteen wide column">
-                        <div class="ui stackable grid" id="profileSliderGrid">
+                        <div class="ui grid" id="profileSliderGrid">
                             <div class="ui center aligned middle aligned two wide column">
                                <i class="left angle icon circular inverted yellow"></i>
                             </div>
@@ -93,36 +93,38 @@
                     </div>
                 </div>
                 
-                <div class="one column row">
-                    <div class="ui raised segments">
-                        <% profileData.forEach(function(profile){%>
-                            <div class="ui padded segment">
-                                <div class="ui large feed">
-                                    <div class="event">
-                                        <div class="label">
-                                            <img src="<%=profile.picture%>">
-                                        </div>
-                                        <div class="content">
-                                            <div class="summary">
-                                                <a href="/profiles/<%=profile.ID%>"><%=profile.name%></a> shares his/her
-                                                favorite quote
-                                                <div class="date">
-                                                    3 days ago
+                <div class="row">
+                    <div class="fourteen wide column">
+                        <div class="ui raised segments">
+                            <% profileData.forEach(function(profile){%>
+                                <div class="ui padded segment">
+                                    <div class="ui large feed">
+                                        <div class="event">
+                                            <div class="label">
+                                                <img src="<%=profile.picture%>">
+                                            </div>
+                                            <div class="content">
+                                                <div class="summary">
+                                                    <a href="/profiles/<%=profile.ID%>"><%=profile.name%></a>'s
+                                                    favorite quote
+                                                    <div class="date">
+                                                        3 days ago
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="extra text">
-                                                <%=profile.quote%>
-                                            </div>
-                                            <div class="meta">
-                                                <a class="like">
-                                                    <i class="like icon"></i> 5 Likes
-                                                </a>
+                                                <div class="extra text">
+                                                    <%=profile.quote%>
+                                                </div>
+                                                <div class="meta">
+                                                    <a class="like">
+                                                        <i class="like icon"></i> 5 Likes
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <% }) %>
+                                <% }) %>
+                        </div>
                     </div>
                 </div>
             </div>  

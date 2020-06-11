@@ -1,10 +1,10 @@
 <% include ../partials/header %>
 
 <div class="" id="main-grid">
-    <div class="ui celled centered grid" style="background:#1c1d1e">
+    <div class="ui celled centered grid" style="background:#1c1d1e;">
         <div class="row">
             <div class="ui center aligned four wide column">
-                <div class="ui circular image " style="max-width: 250px; max-height: 250px;">
+                <div class="ui circular image" id="profileShow">
                     <img src="<%=data.picture%>">
                 </div>
                 <h1 class="ui inverted header">
@@ -13,9 +13,7 @@
                         <div class="sub header">Class of <%=data.year %></div>
                     </div>
                 </h1>
-                <div>
-                    <h2 class="ui inverted header" style="font-size: 1.5em; margin: 1.5em 0 1.5em 0;"><%=data.quote %></h2>
-                </div>
+
                 
             </div>
         </div>
@@ -146,7 +144,7 @@
     </div>
 
     <div class="ui tab" data-tab="friends">
-        <div class="ui container centered grid">
+        <div class="ui container centered grid" style="margin-bottom: 8vh;">
            <div class="row">
                 <div class="fourteen wide column">
                     <div class="ui padded segment">
@@ -213,7 +211,7 @@
     </div>
 
     <div class="ui tab" data-tab="photos">
-        <div class="ui container padded segment">
+        <div class="ui container padded segment" style="margin-bottom: 8vh;">
             <h1 class="ui header">Photos</h1>
             <div class=" four column doubling ui stackable centered grid">
                 <% for(var i=0; i < 30; ++i){ %>

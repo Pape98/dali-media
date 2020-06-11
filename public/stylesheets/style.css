@@ -16,32 +16,29 @@ body {
   background: #eff2f5;
 }
 
-
 html,
 body {
   height: 100%;
   width: 100%;
 }
 
-#navbar {
-  height: 7vh !important;
-}
-
 #main-grid {
   height: 100%;
-  margin: 7.0vh 0 0 0!important;
 }
 
 .margin-0 {
   margin: 0 !important;
 }
 
-
 .padding-0 {
   padding: 0 !important;
 }
 
-
+#profileShow {
+  max-width: 250px;
+  max-height: 250px;
+  margin-top: 5vh;
+}
 textarea {
   border: none;
   background: #eff2f5;
@@ -55,17 +52,17 @@ textarea {
   font-size: 1.7em;
 }
 
-
-
-
 @media only screen and (max-width: 1445px) {
- /* #leftPanel,
- #rightPanel, */
- #navbar{
-   display: none;
- }
+  #leftPanel,
+  #rightPanel,
+  #navbar {
+    display: none;
+  }
 }
 
-@media only screen and (max-width: 773px) {
-  
+@media only screen and (min-width: 1445px) {
+  #smallTopNavbar,
+  #smallBottomNavbar {
+    display: none;
+  }
 }
