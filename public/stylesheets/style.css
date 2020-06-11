@@ -14,6 +14,11 @@
 
 body {
   background: #eff2f5;
+  font-family: Verdana, Geneva, sans-serif !important;
+}
+
+a,p,h1,h2,h3,h4{
+  font-family: Verdana, Geneva, sans-serif !important;
 }
 
 html,
@@ -22,8 +27,9 @@ body {
   width: 100%;
 }
 
-#main-grid {
+#main-grid-index {
   height: 100%;
+  margin: 10vh 0 10vh 0 !important;
 }
 
 .margin-0 {
@@ -46,15 +52,16 @@ textarea {
 }
 
 .title {
-  font-family: Noteworthy;
+  font-family: Verdana, Geneva, sans-serif !important;
   font-style: normal;
-  font-weight: bolder;
+  font-weight: 700 !important;
   font-size: 1.7em;
 }
 
 @media only screen and (max-width: 1445px) {
   #leftPanel,
   #rightPanel,
+  #footer,
   #navbar {
     display: none;
   }

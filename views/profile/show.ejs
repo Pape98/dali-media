@@ -7,7 +7,7 @@
                 <div class="ui circular image" id="profileShow">
                     <img src="<%=data.picture%>">
                 </div>
-                <h1 class="ui inverted header">
+                <h1 class="ui inverted header" style="margin-bottom: 5vh;">
                     <div class="content">
                         <%=data.name %>
                         <div class="sub header">Class of <%=data.year %></div>
@@ -26,12 +26,12 @@
         </div>
     </div>
 
-    <div class="ui active tab basic segment" data-tab="timeline">
+    <div class="ui active tab basic segment" data-tab="timeline" style="margin-bottom: 8vh;">
         <div class="ui container centered stackable grid">
             <div class="seven wide column">
                 <div>
                     <div class="ui sticky">
-                        <div class="ui segment">
+                        <div class="ui raised padded segment">
                             <h3 class="ui grey header">Intro</h3>
 
                             <div class="ui big list">
@@ -86,7 +86,7 @@
                                 
                             </div>
                         </div>
-                        <div class="ui segment">
+                        <div class="ui raised padded segment">
                             <h3 class="ui grey header">Some Friends</h3>
                             <a class="ui black top right attached big label">1652 Friends</a>
 
@@ -153,7 +153,7 @@
                         <div class="ui two column stackable grid">
                             <div class="column">
                                 <% for(var i=0; i < 15; ++i){ %>
-                                    <div class="ui padded segment ">
+                                    <div class="ui padded raised segment ">
                                         <div class="ui items">
                                             <div class="item">
                                               <div class="ui small circular image" style="height: 135px;" >
@@ -179,7 +179,7 @@
                             </div>
                             <div class="column">
                                 <% for(var i=16; i < 31; ++i){ %>
-                                    <div class="ui padded segment ">
+                                    <div class="ui padded raisded segment ">
                                         <div class="ui items">
                                             <div class="item">
                                               <div class="ui small circular image" style="height: 135px;" >
@@ -211,7 +211,7 @@
     </div>
 
     <div class="ui tab" data-tab="photos">
-        <div class="ui container padded segment" style="margin-bottom: 8vh;">
+        <div class="ui container padded raised padded segment" style="margin-bottom: 8vh;">
             <h1 class="ui header">Photos</h1>
             <div class=" four column doubling ui stackable centered grid">
                 <% for(var i=0; i < 30; ++i){ %>

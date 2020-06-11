@@ -1,6 +1,6 @@
 <% include ../partials/header %>
 
-<div class="ui centered grid" id="main-grid">
+<div class="ui centered grid" id="main-grid-index">
     <div class=" large screen only three wide column" id="leftPanel">
         <div class="ui inverted raised segment">
             <h4 class="ui header">Your Latest Posts</h4>
@@ -17,9 +17,9 @@
                         <div class="metadata">
                             <div class="date">2 days ago</div>
                         </div>
-                        <div class="text">
+                        <p class="text">
                             <%=posts['posts'][i]['post']%>
-                        </div>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -29,11 +29,10 @@
 
     <div class="eight wide column" id="middlePanel">
         <div id="context">
-            <div class="ui centered grid">
+            <div class="ui centered grid" style="margin-bottom: 10vh;">
                 <div class="row">
                     <div class="fourteen wide column">
                         <div class="ui padded raised segment ">
-                            
                             
                                 <div class="ui large items">
                                     <div class="item">

@@ -23,6 +23,7 @@ function initializeSticky() {
   mySticky.sticky({
     context: "#context",
     offset: 100,
+    bottomOffset:100,
   });
 }
 
@@ -77,7 +78,7 @@ function showProfiles() {
 
 function getNewProfiles() {
   axios
-    .get("http://localhost:3000/api/profiles")
+    .get("http://localhost:3000/api/profiles/3")
     .then((response) => {
       var newProfiles = "";
       for (var i = 0; i < 3; ++i) {
@@ -95,7 +96,7 @@ function createProfile(profile, idName) {
     '<div class="ui circular image" >' +
     '<img src="' +
     profile.picture +
-    '" style="width: 150px; height: 150px;>' +
+    '" style="width: 150px; height: 150px;">' +
     "</div>" +
     '<div class="ui small header">' +
     profile.name +
@@ -104,6 +105,8 @@ function createProfile(profile, idName) {
     profile.ID +
     '">View Profile</a>' +
     "</div>";
+
+    
 
   return profileCode;
 }
