@@ -73,3 +73,10 @@ textarea {
     display: none;
   }
 }
+
+.profileSlider > .ui.small.image > .ui.circular.image{
+  width: 10vw !important; 
+  height: auto !important;
+  max-height: 150px;
+  border: 2px #fcbc09  solid;
+}
