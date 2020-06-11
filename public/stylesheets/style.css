@@ -29,7 +29,7 @@ body {
 
 #main-grid-index {
   height: 100%;
-  margin: 4vh 0 10vh 0 !important;
+  margin: 10vh 0 10vh 0 !important;
 }
 
 .margin-0 {
@@ -45,6 +45,13 @@ body {
   max-height: 250px;
   margin-top: 5vh;
 }
+
+#quoteSlideShow{
+  padding: 6vh 0 0vh 0;
+  margin: 0 !important;
+  background: #1b1c1d;
+}
+
 textarea {
   border: none;
   background: #eff2f5;
@@ -62,6 +69,7 @@ textarea {
   #leftPanel,
   #rightPanel,
   #footer,
+  #quoteSlideShow,
   #navbar {
     display: none;
   }

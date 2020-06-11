@@ -1,3 +1,5 @@
+import {getData} from './DALI_Data.js';
+
 $(document).ready(function () {
   movePictureSlider();
   initializeSticky();
@@ -8,11 +10,20 @@ $(document).ready(function () {
 });
 
 
-function quoteSlideShow(){
-  axios.get('http://localhost:3000/api/profiles/30')
-  .then((response) => { 
-    console.log(response)
-  }).catch((err) => console.log(err));
+var slideShowCounter = 0;
+var profileData = getData();
+
+function changeQuote(){
+  $('#quote').empty();
+  $('.ui.circular.image.quote').empty();
+  $('#quote').append(profileData[slideShowCounter].quote);
+  $('.ui.circular.image.quote').append('<img src="'+profileData[slideShowCounter].picture +'">');
+  console.log(profileData[slideShowCounter].quote)
+  ++slideShowCounter;
+}
+
+function quoteSlideShow() {
+  setInterval(changeQuote,4000);
 }
 
 function activeTabs() {
@@ -20,9 +31,9 @@ function activeTabs() {
 }
 
 function activateSidebar() {
-  $('.hamburger').click(function(){
+  $(".hamburger").click(function () {
     $(".ui.sidebar").sidebar("toggle");
-  })
+  });
 }
 function initializeSticky() {
   var mySticky = $(".ui.sticky");
@@ -32,8 +43,10 @@ function initializeSticky() {
   mySticky.sticky({
     context: "#context",
     offset: 100,
-    bottomOffset:100,
+    bottomOffset: 10000,
   });
+
+  $(".ui.sticky").sticky("refresh");
 }
 
 function getWindowWidth() {
@@ -44,7 +57,6 @@ function getWindowWidth() {
 function modifyContent() {
   var bodyWidth = getWindowWidth();
   var middlePanel = $("#middlePanel");
-  console.log(bodyWidth);
   if (bodyWidth < 1445) {
     console.log("here");
     middlePanel.removeClass("eight wide column");
@@ -100,21 +112,23 @@ function getNewProfiles() {
 }
 
 function createProfile(profile, idName) {
-
   var bodyWidth = getWindowWidth();
   var profileStyle;
-  if(bodyWidth > 1445){
-    profileStyle = 'style ="width: 8vw;height: 150px;border: 2px #fcbc09  solid;"'
-  } else{
-    profileStyle = 'style ="width: 82px;height: 82px;border: 2px #fcbc09  solid;"'
-
+  if (bodyWidth > 1445) {
+    profileStyle =
+      'style ="width: 8vw;height: 150px;border: 2px #fcbc09  solid;"';
+  } else {
+    profileStyle =
+      'style ="width: 82px;height: 82px;border: 2px #fcbc09  solid;"';
   }
   var profileCode =
     '<div class="column profileSlider">' +
     '<div class="ui circular image" >' +
     '<img src="' +
-    profile.picture + 
-    '"' + profileStyle+'>' +
+    profile.picture +
+    '"' +
+    profileStyle +
+    ">" +
     "</div>" +
     '<div class="ui small header">' +
     profile.name +
@@ -123,8 +137,6 @@ function createProfile(profile, idName) {
     profile.ID +
     '">View Profile</a>' +
     "</div>";
-
-    
 
   return profileCode;
 }
