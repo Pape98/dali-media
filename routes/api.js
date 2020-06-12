@@ -35,7 +35,4 @@ router.get("/profiles/:count", function (req, res, next) {
   res.json(selectedProfileData);
 });
 
-// var results = {"results":profileData}
-// res.json(results);
-
 module.exports = router;

@@ -36,7 +36,7 @@ function changeQuote() {
 }
 
 function quoteSlideShow() {
-  setInterval(changeQuote, 4000);
+  setInterval(changeQuote, 3500);
 }
 
 function activeTabs() {
@@ -58,6 +58,7 @@ function activateSidebar() {
 function activatePopup() {
   $(".prompt").popup({
     on: "focus",
+    position   : 'right center',
   });
 
   $(".post.item").popup({
