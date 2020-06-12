@@ -22,8 +22,8 @@ body {
 }
 
 .image.quote {
-  width: 130px;
-  height: 130px;
+  width: 200px;
+  height: 200px;
 }
 
 html,
@@ -51,6 +51,9 @@ body {
   margin-top: 8vh;
 }
 
+#quote{
+  font-size: 3vh;
+}
 #quoteSlideShow {
   padding: 4vh 0 0vh 0;
   margin: 0 0 -5vh 0 !important;

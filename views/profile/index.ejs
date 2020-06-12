@@ -1,18 +1,19 @@
 <% include ../partials/header %>
 
 
-<div class="ui internally celled centered inverted grid " id="quoteSlideShow">
+<div class="ui internally centered inverted grid " id="quoteSlideShow">
     <div class="row">
        <div class="ui divider"></div>
     </div>
     <div class="row">
-       <div class="ui middle aligned center aligned black inverted four wide column">
+       <div class="ui middle aligned center aligned black inverted six wide column">
           <div class="ui inverted items">
-             <div class="item">
+             <div class="ui segment item">
                 <div class="ui circular image quote">
+                    <img src="<%=profileData[34].picture%>" alt="profile picture">
                 </div>
                 <div class="middle aligned content">
-                   <p id="quote"></p>
+                   <p id="quote"><%=profileData[34].quote%></p>
                 </div>
              </div>
           </div>
