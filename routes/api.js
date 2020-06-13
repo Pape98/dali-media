@@ -16,6 +16,12 @@ router.get("/profiles/search", function (req, res, next) {
         url: "/profiles/" + profile.ID,
       });
     });
+
+    /**  
+     * Search API requires the json output to have fiels named
+     * in a specific way. 
+     * */ 
+   
     var data = {
       results: editedprofileData,
     };

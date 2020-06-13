@@ -35,6 +35,7 @@ router.get("/", function (req, res, next) {
     posts: postData,
   });
 });
+
 router.get("/:id", function (req, res, next) {
   var shuffledProfileData = helpers.shuffle(profileData);
   var id = req.params.id;
