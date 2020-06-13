@@ -29,4 +29,4 @@ Add additional notes about how to deploy this on a live system
 
 ## Authors
 
-* **Pape Sow Traore* - (https://github.com/Pape98)
+ **Pape Sow Traore* - (https://github.com/Pape98)
