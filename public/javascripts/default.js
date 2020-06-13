@@ -1,6 +1,7 @@
 import { getData } from "./DALI_Data.js";
 
 $(document).ready(function () {
+  console.log('Listening on port ' + window.location.port);
   movePictureSlider();
   initializeSticky();
   activeTabs();
@@ -142,8 +143,9 @@ function showProfiles() {
 }
 
 function getNewProfiles() {
+  var port = window.location.port
   axios
-    .get("http://localhost:3000/api/profiles/3")
+    .get("http://localhost:"+port+"/api/profiles/3")
     .then((response) => {
       var newProfiles = "";
       for (var i = 0; i < 3; ++i) {
