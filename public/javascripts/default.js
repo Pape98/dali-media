@@ -145,7 +145,7 @@ function showProfiles() {
 function getNewProfiles() {
   var port = location.port || (location.protocol === 'https:' ? '443' : '80');
   axios
-    .get("http://localhost:"+port+"/api/profiles/3")
+    .get("/api/profiles/3")
     .then((response) => {
       var newProfiles = "";
       for (var i = 0; i < 3; ++i) {
