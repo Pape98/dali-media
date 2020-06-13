@@ -6,6 +6,12 @@ This website displays the profiles of members of the DALI Lab at Dartmouth Colle
 
 https://dartdalibook.herokuapp.com/
 
+## Link Demo Video
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=dUugHVACukY
+" target="_blank"><img src="http://img.youtube.com/vi/dUugHVACukY/0.jpg" 
+alt="solution's video" border="10" width="700" height="500" /></a>
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
