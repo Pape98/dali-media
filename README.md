@@ -28,6 +28,8 @@ npm install
 npm start
 ```
 
+Access website on localhost with the port number printed on terminal (usually 3000).
+
 ## Built With
 
 * [NodeJS](https://nodejs.org/en/) - The web framework used
