@@ -1,6 +1,6 @@
 # DALI Front-End Social Media Challenge
 
-This website displays the profiles of members of the DALI Lab at Dartmouth College. The user has the ability to search for members by their typing their whole names and to create new posts. 
+This website displays the profiles of members of the DALI Lab at Dartmouth College. The user has the ability to search for a specific member by typing his or her entire name and also to create new posts. 
 
 ## Link to Hosted Site
 
